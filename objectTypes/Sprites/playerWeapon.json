@@ -3,7 +3,43 @@
 	"plugin-id": "Sprite",
 	"sid": 712257263190941,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "fireRate",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 320992387947634
+		},
+		{
+			"name": "leftJam",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 646189981630124
+		},
+		{
+			"name": "rightJam",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 722208552308773
+		},
+		{
+			"name": "bulletSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 659398318601562
+		},
+		{
+			"name": "bulletDamage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 604471032963741
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -18,29 +54,17 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7184792,
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 3965244,
+						"imageSpriteId": 2696274,
 						"collisionPoly": {
 							"points": [
-								0.765625,
-								0.765625,
-								0.234375,
-								0.765625,
-								0.890625,
-								0.890625,
-								0.109375,
-								0.890625
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
 							]
 						},
 						"useCollisionPoly": true,
@@ -54,7 +78,43 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1422482,
+						"imageSpriteId": 4045722,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.765625,
+								0.234375,
+								0.234375,
+								0.109375,
+								0.890625,
+								0.109375,
+								0.109375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8589709,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

@@ -12,6 +12,46 @@
 			"sid": 113884405247036
 		},
 		{
+			"eventType": "variable",
+			"name": "readyForLaunch",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 791851502813050
+		},
+		{
+			"eventType": "variable",
+			"name": "shipSelected",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 807855310065093
+		},
+		{
+			"eventType": "variable",
+			"name": "weaponSelected",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 447056518854240
+		},
+		{
+			"eventType": "variable",
+			"name": "engineSelected",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 193325170938113
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -34,6 +74,10 @@
 						{
 							"type": "script",
 							"script": "runtime.spriteGrids.gridShip.create();"
+						},
+						{
+							"callFunction": "initializeEngineerBay",
+							"sid": 768447198907529
 						}
 					],
 					"sid": 484879518268458
@@ -44,11 +88,127 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 312819006066595,
+					"parameters": {
+						"variable": "shipSelected"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 222424096093024,
+					"parameters": {
+						"variable": "weaponSelected"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 956841557011501,
+					"parameters": {
+						"variable": "engineSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 683540552398414,
+					"parameters": {
+						"variable": "readyForLaunch",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 320018874449798
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 731835144284490,
+					"parameters": {
+						"variable": "readyForLaunch"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 317608716951405
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "launchButton",
+					"sid": 424111290139218,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "launchButtonText",
+					"sid": 560198874553208,
+					"parameters": {
+						"color": "rgbEx(54, 72, 77)"
+					}
+				}
+			],
+			"sid": 862486332424027
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 111768335687068,
+					"parameters": {
+						"variable": "readyForLaunch"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 802105636439618
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-color",
+					"objectClass": "launchButtonText",
+					"sid": 426071631592121,
+					"parameters": {
+						"color": "rgbEx(239, 173, 106)"
+					}
+				}
+			],
+			"sid": 811669364189276
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 817584300042282,
 					"parameters": {
 						"object": "launchButton"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 652237941252420,
+					"parameters": {
+						"variable": "readyForLaunch"
 					}
 				}
 			],
@@ -75,6 +235,14 @@
 						"object": "launchButton"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 860026453846613,
+					"parameters": {
+						"variable": "readyForLaunch"
+					}
 				}
 			],
 			"actions": [
@@ -156,6 +324,14 @@
 										"variable": "currentPage",
 										"value": "\"gridShip\""
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "shipStats",
+									"sid": 117877000980133,
+									"parameters": {
+										"frame-number": "1"
+									}
 								}
 							],
 							"sid": 493061441372095
@@ -214,6 +390,14 @@
 										"variable": "currentPage",
 										"value": "\"gridWeapon\""
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "shipStats",
+									"sid": 202224121818533,
+									"parameters": {
+										"frame-number": "2"
+									}
 								}
 							],
 							"sid": 324590058317178
@@ -271,6 +455,14 @@
 									"parameters": {
 										"variable": "currentPage",
 										"value": "\"gridEngine\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "shipStats",
+									"sid": 535726557412317,
+									"parameters": {
+										"frame-number": "3"
 									}
 								}
 							],
@@ -403,6 +595,1508 @@
 						}
 					],
 					"sid": 816535495303784
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 818928306067504,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "gridShip"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "updateInstanceVars",
+					"sid": 276236564586351,
+					"parameters": [
+						"gridShip.UID",
+						"gridShip.AnimationName"
+					]
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 990070564088398,
+					"parameters": {
+						"variable": "shipSelected",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 333383133769939,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 432321680144159,
+							"parameters": {
+								"object": "playerShip"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "playerShip",
+							"sid": 215222420711675,
+							"parameters": {
+								"frame-number": "gridShip.AnimationFrame"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerShip",
+							"sid": 924135039559213,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"callFunction": "updateStatText",
+							"sid": 306094452589609,
+							"parameters": [
+								"gridShip.UID",
+								"gridShip.AnimationName"
+							]
+						}
+					],
+					"sid": 478851658013325
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 685755784528940,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "gridWeapon"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "updateInstanceVars",
+					"sid": 812899962034920,
+					"parameters": [
+						"gridWeapon.UID",
+						"gridWeapon.AnimationName"
+					]
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 778523634923546,
+					"parameters": {
+						"variable": "weaponSelected",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 300608960039190,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 634185952549397,
+							"parameters": {
+								"object": "playerWeapon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "playerWeapon",
+							"sid": 579633889335943,
+							"parameters": {
+								"frame-number": "gridWeapon.AnimationFrame"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerWeapon",
+							"sid": 733729101579118,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"callFunction": "updateStatText",
+							"sid": 673091685561644,
+							"parameters": [
+								"gridWeapon.UID",
+								"gridWeapon.AnimationName"
+							]
+						}
+					],
+					"sid": 789358029560778
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 427461507369016,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "gridEngine"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "updateInstanceVars",
+					"sid": 430509552548755,
+					"parameters": [
+						"gridEngine.UID",
+						"gridEngine.AnimationName"
+					]
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 999641913158084,
+					"parameters": {
+						"variable": "engineSelected",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 477589981289256,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 821095226012933,
+							"parameters": {
+								"object": "playerEngine"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "playerEngine",
+							"sid": 639146213063090,
+							"parameters": {
+								"frame-number": "gridEngine.AnimationFrame"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerEngine",
+							"sid": 894783674914403,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"callFunction": "updateStatText",
+							"sid": 350001520023056,
+							"parameters": [
+								"gridEngine.UID",
+								"gridEngine.AnimationName"
+							]
+						}
+					],
+					"sid": 788604220017884
+				}
+			]
+		},
+		{
+			"functionName": "initializeEngineerBay",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 430548845021767,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 455168216762228,
+							"parameters": {
+								"object-to-create": "playerShip",
+								"layer": "\"shipGrid\"",
+								"x": "alignShip.X",
+								"y": "alignShip.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "playerShip",
+							"sid": 543197339084429,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "playerShip",
+							"sid": 449068434843051,
+							"parameters": {
+								"scale": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerShip",
+							"sid": 657422793509332,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 113677379913412
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 896186615838621,
+							"parameters": {
+								"object-to-create": "playerWeapon",
+								"layer": "\"shipGrid\"",
+								"x": "alignShip.X",
+								"y": "alignShip.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "playerWeapon",
+							"sid": 269295961639948,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "playerWeapon",
+							"sid": 457205948426919,
+							"parameters": {
+								"scale": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerWeapon",
+							"sid": 230187817859813,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 901983944124856
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 274448798941557,
+							"parameters": {
+								"object-to-create": "playerEngine",
+								"layer": "\"shipGrid\"",
+								"x": "alignShip.X",
+								"y": "alignShip.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "playerEngine",
+							"sid": 899353415925286,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "playerEngine",
+							"sid": 103733159446585,
+							"parameters": {
+								"scale": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerEngine",
+							"sid": 290802224765431,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 335135208071438
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "shipStats",
+							"sid": 145934582315924,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 976387294574424
+				}
+			]
+		},
+		{
+			"functionName": "updateStatText",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "UID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 375056877696855
+				},
+				{
+					"name": "shipPart",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 195377598784670
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 768127430412186,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 278432173919292,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridShip\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 164078104176316,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "hp",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 312745753340549
+						},
+						{
+							"eventType": "variable",
+							"name": "shields",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 706294386361613
+						},
+						{
+							"eventType": "variable",
+							"name": "generator",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 773238087732077
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridShip",
+									"sid": 882906743604270,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 488895929740177,
+									"parameters": {
+										"variable": "hp",
+										"value": "gridShip.hp"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 917701662632716,
+									"parameters": {
+										"variable": "shields",
+										"value": "gridShip.shields"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 623362203362643,
+									"parameters": {
+										"variable": "generator",
+										"value": "gridShip.generator"
+									}
+								}
+							],
+							"sid": 220807723764975,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 620633620780665,
+											"parameters": {
+												"variable": "playerHP",
+												"value": "hp"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 364670663197351,
+											"parameters": {
+												"variable": "playerShields",
+												"value": "shields"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 467899950340921,
+											"parameters": {
+												"variable": "playerGenerator",
+												"value": "generator"
+											}
+										}
+									],
+									"sid": 220727631861780
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 960976859429711,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"hp\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 738495251386198,
+									"parameters": {
+										"width": "(hp / 100) * 64"
+									}
+								}
+							],
+							"sid": 969652284934759
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 108184784444514,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"shields\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 943780172307166,
+									"parameters": {
+										"width": "(shields/ 100) * 64"
+									}
+								}
+							],
+							"sid": 459713294705456
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 813140856495710,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"generator\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 534992519041922,
+									"parameters": {
+										"width": "(generator / 100) * 64"
+									}
+								}
+							],
+							"sid": 485905342285247
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 778293776787570,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridWeapon\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 214089442821716,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "fireRate",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 878851025975020
+						},
+						{
+							"eventType": "variable",
+							"name": "bulletSpeed",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 854205542527101
+						},
+						{
+							"eventType": "variable",
+							"name": "bulletDamage",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 425527640619666
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridWeapon",
+									"sid": 194720437786113,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 554707346911679,
+									"parameters": {
+										"variable": "fireRate",
+										"value": "gridWeapon.fireRate"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 693483361914194,
+									"parameters": {
+										"variable": "bulletSpeed",
+										"value": "gridWeapon.bulletSpeed"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 829254550947015,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "gridWeapon.bulletDamage"
+									}
+								}
+							],
+							"sid": 880782331378089,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 588931337527214,
+											"parameters": {
+												"variable": "playerFireRate",
+												"value": "fireRate"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 920348302831992,
+											"parameters": {
+												"variable": "playerBulletSpeed",
+												"value": "bulletSpeed"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 372721933889687,
+											"parameters": {
+												"variable": "playerBulletDamage",
+												"value": "bulletDamage"
+											}
+										}
+									],
+									"sid": 844533866114376
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 448052251083992,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"fireRate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 690838136623459,
+									"parameters": {
+										"width": "(fireRate / 100) * 64"
+									}
+								}
+							],
+							"sid": 921163995710753
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 669560340090765,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"bulletSpeed\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 821816491455810,
+									"parameters": {
+										"width": "(bulletSpeed/ 100) * 64"
+									}
+								}
+							],
+							"sid": 379495258939501
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 840282032005086,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"bulletDamage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 489067088700228,
+									"parameters": {
+										"width": "(bulletDamage / 100) * 64"
+									}
+								}
+							],
+							"sid": 368049027612617
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 918408799183789,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridEngine\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 854872158450652,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "acceleration",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 821754713541456
+						},
+						{
+							"eventType": "variable",
+							"name": "turnSpeed",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 311973444630756
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridEngine",
+									"sid": 281263778168959,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 124624350440954,
+									"parameters": {
+										"variable": "acceleration",
+										"value": "gridEngine.acceleration"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 416864128219493,
+									"parameters": {
+										"variable": "turnSpeed",
+										"value": "gridEngine.turnSpeed"
+									}
+								}
+							],
+							"sid": 527413206606467,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 636230606205595,
+											"parameters": {
+												"variable": "playerAcceleration",
+												"value": "acceleration"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 408062907773002,
+											"parameters": {
+												"variable": "playerTurnSpeed",
+												"value": "turnSpeed"
+											}
+										}
+									],
+									"sid": 965964632103314
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 157388275343815,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"acceleration\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 345123829746430,
+									"parameters": {
+										"width": "(acceleration / 100) * 64"
+									}
+								}
+							],
+							"sid": 349370450714953
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 740129034308382,
+									"parameters": {
+										"object": "indicatorBarFill",
+										"expression": "indicatorBarFill.State",
+										"comparison": 0,
+										"value": "\"turnSpeed\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "indicatorBarFill",
+									"sid": 893021077119960,
+									"parameters": {
+										"width": "(turnSpeed/ 100) * 64"
+									}
+								}
+							],
+							"sid": 782040220215629
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "updateInstanceVars",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "UID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 519166639963545
+				},
+				{
+					"name": "shipPart",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 954812234716111
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 272378062805117,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 569670268291110,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridShip\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 833901238470047,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridShip",
+									"sid": 767657240852948,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 231566228521399,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridShip",
+											"sid": 934469909069031,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 250559076039234,
+											"parameters": {
+												"instance-variable": "hp",
+												"value": "80"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 269103998894185,
+											"parameters": {
+												"instance-variable": "shields",
+												"value": "20"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 275378039616444,
+											"parameters": {
+												"instance-variable": "generator",
+												"value": "50"
+											}
+										}
+									],
+									"sid": 238904065210582
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridShip",
+											"sid": 413036682436768,
+											"parameters": {
+												"comparison": 0,
+												"number": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 340361453650265,
+											"parameters": {
+												"instance-variable": "hp",
+												"value": "60"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 846975572947692,
+											"parameters": {
+												"instance-variable": "shields",
+												"value": "30"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 740463244992375,
+											"parameters": {
+												"instance-variable": "generator",
+												"value": "100"
+											}
+										}
+									],
+									"sid": 490459896401448
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridShip",
+											"sid": 926291292897271,
+											"parameters": {
+												"comparison": 0,
+												"number": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 226949524579957,
+											"parameters": {
+												"instance-variable": "hp",
+												"value": "40"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 497313020609129,
+											"parameters": {
+												"instance-variable": "shields",
+												"value": "70"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridShip",
+											"sid": 263210181960554,
+											"parameters": {
+												"instance-variable": "generator",
+												"value": "20"
+											}
+										}
+									],
+									"sid": 206445268038116
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 949800737257907,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridWeapon\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 839095610814481,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridWeapon",
+									"sid": 288665979450686,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 812100803472844,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridWeapon",
+											"sid": 507910049356863,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 877835808076776,
+											"parameters": {
+												"instance-variable": "fireRate",
+												"value": "10"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 976154838380430,
+											"parameters": {
+												"instance-variable": "bulletSpeed",
+												"value": "30"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 448478281709954,
+											"parameters": {
+												"instance-variable": "bulletDamage",
+												"value": "90"
+											}
+										}
+									],
+									"sid": 875010840824073
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridWeapon",
+											"sid": 441540164714947,
+											"parameters": {
+												"comparison": 0,
+												"number": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 343577311062584,
+											"parameters": {
+												"instance-variable": "fireRate",
+												"value": "100"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 622046184246026,
+											"parameters": {
+												"instance-variable": "bulletSpeed",
+												"value": "90"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 489153118917947,
+											"parameters": {
+												"instance-variable": "bulletDamage",
+												"value": "10"
+											}
+										}
+									],
+									"sid": 306339249557328
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridWeapon",
+											"sid": 411512448665951,
+											"parameters": {
+												"comparison": 0,
+												"number": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 325571195508266,
+											"parameters": {
+												"instance-variable": "fireRate",
+												"value": "50"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 369268386971534,
+											"parameters": {
+												"instance-variable": "bulletSpeed",
+												"value": "60"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridWeapon",
+											"sid": 228590935325654,
+											"parameters": {
+												"instance-variable": "bulletDamage",
+												"value": "40"
+											}
+										}
+									],
+									"sid": 777561448228403
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 915244289223942,
+							"parameters": {
+								"first-value": "shipPart",
+								"comparison": 0,
+								"second-value": "\"gridEngine\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 541504566720130,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "gridEngine",
+									"sid": 408375490092898,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 914375860341407,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridEngine",
+											"sid": 691951021335246,
+											"parameters": {
+												"comparison": 0,
+												"number": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 174313628605343,
+											"parameters": {
+												"instance-variable": "acceleration",
+												"value": "80"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 665155837341055,
+											"parameters": {
+												"instance-variable": "turnSpeed",
+												"value": "30"
+											}
+										}
+									],
+									"sid": 643372034258931
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridEngine",
+											"sid": 584413240273274,
+											"parameters": {
+												"comparison": 0,
+												"number": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 548916064569381,
+											"parameters": {
+												"instance-variable": "acceleration",
+												"value": "40"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 511756060115533,
+											"parameters": {
+												"instance-variable": "turnSpeed",
+												"value": "70"
+											}
+										}
+									],
+									"sid": 601204429921765
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-animation-frame",
+											"objectClass": "gridEngine",
+											"sid": 249654419570959,
+											"parameters": {
+												"comparison": 0,
+												"number": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 561725248398099,
+											"parameters": {
+												"instance-variable": "acceleration",
+												"value": "60"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "gridEngine",
+											"sid": 546418665291427,
+											"parameters": {
+												"instance-variable": "turnSpeed",
+												"value": "50"
+											}
+										}
+									],
+									"sid": 193503391571243
+								}
+							]
+						}
+					]
 				}
 			]
 		}

@@ -3,83 +3,83 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "weaponFireRate",
+			"name": "playerHP",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 694295484349293
+			"sid": 624460142572999
 		},
 		{
 			"eventType": "variable",
-			"name": "bulletSpeed",
+			"name": "playerShields",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 727004652547446
+			"sid": 745857278926228
 		},
 		{
 			"eventType": "variable",
-			"name": "weaponLeftJam",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 657811755069236
-		},
-		{
-			"eventType": "variable",
-			"name": "weaponRightJam",
-			"type": "boolean",
-			"initialValue": "false",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 190383433109763
-		},
-		{
-			"eventType": "variable",
-			"name": "shieldGenerator",
-			"type": "number",
-			"initialValue": "100",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 762164530789831
-		},
-		{
-			"eventType": "variable",
-			"name": "shieldMax",
-			"type": "number",
-			"initialValue": "100",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 332269409620301
-		},
-		{
-			"eventType": "variable",
-			"name": "engineAcceleration",
+			"name": "playerGenerator",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 474915725194217
+			"sid": 220399576632011
 		},
 		{
 			"eventType": "variable",
-			"name": "engineTurnSpeed",
+			"name": "playerFireRate",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 579922612073215
+			"sid": 454749808244815
+		},
+		{
+			"eventType": "variable",
+			"name": "playerBulletSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 734196022374628
+		},
+		{
+			"eventType": "variable",
+			"name": "playerBulletDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 963137068324104
+		},
+		{
+			"eventType": "variable",
+			"name": "playerAcceleration",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 791870545300193
+		},
+		{
+			"eventType": "variable",
+			"name": "playerTurnSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 505024464822189
 		}
 	],
 	"sid": 380652354289867

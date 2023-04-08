@@ -1,0 +1,57 @@
+{
+	"name": "indicatorBar",
+	"plugin-id": "Sprite",
+	"sid": 248956827635599,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5439314,
+						"collisionPoly": {
+							"points": [
+								0.03125,
+								0.125,
+								0.5,
+								0,
+								0.96875,
+								0.125,
+								1,
+								0.5,
+								0.96875,
+								0.875,
+								0.5,
+								1,
+								0.03125,
+								0.875,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 732439450056113,
+				"name": "indicatorBar",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

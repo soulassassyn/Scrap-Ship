@@ -3,7 +3,29 @@
 	"plugin-id": "Sprite",
 	"sid": 574125701605768,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 221914775378909
+		},
+		{
+			"name": "shields",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 819929693156671
+		},
+		{
+			"name": "generator",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 450071116606364
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

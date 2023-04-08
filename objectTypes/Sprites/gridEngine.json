@@ -3,7 +3,22 @@
 	"plugin-id": "Sprite",
 	"sid": 693703672146131,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "acceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 392929101551273
+		},
+		{
+			"name": "turnSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 631650887957211
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

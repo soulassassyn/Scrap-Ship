@@ -75,7 +75,8 @@
 			"MenuItems",
 			"gridTitle",
 			"launchButtonText",
-			"tabTitle"
+			"tabTitle",
+			"coreStatText"
 		],
 		"subfolders": [
 			{
@@ -97,7 +98,9 @@
 					"launchButton",
 					"shipStats",
 					"tab",
-					"alignShip"
+					"alignShip",
+					"indicatorBar",
+					"indicatorBarFill"
 				],
 				"subfolders": [],
 				"name": "Sprites"

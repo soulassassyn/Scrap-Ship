@@ -3,7 +3,43 @@
 	"plugin-id": "Sprite",
 	"sid": 585818844747092,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "fireRate",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 522842556747263
+		},
+		{
+			"name": "leftJam",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 413920038921119
+		},
+		{
+			"name": "rightJam",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 604081231986496
+		},
+		{
+			"name": "bulletSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 644107324740136
+		},
+		{
+			"name": "bulletDamage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 616813201535590
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

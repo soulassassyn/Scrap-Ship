@@ -16,7 +16,11 @@
 						"live-preview": false
 					},
 					"uid": 13,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"shields": 0,
+						"generator": 0
+					},
 					"behaviors": {},
 					"template": {
 						"mode": "template",
@@ -54,7 +58,20 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "hp",
+												"state": true
+											},
+											{
+												"iv": "shields",
+												"state": true
+											},
+											{
+												"iv": "generator",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -158,10 +175,10 @@
 					"world": {
 						"x": 43.80084217259912,
 						"y": 43.99669408397625,
-						"width": 34,
-						"height": 33,
-						"originX": 0.5,
-						"originY": 0.48484848484848486,
+						"width": 33,
+						"height": 34,
+						"originX": 0.5151515151515151,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -182,7 +199,13 @@
 						"live-preview": false
 					},
 					"uid": 14,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"fireRate": 0,
+						"leftJam": false,
+						"rightJam": false,
+						"bulletSpeed": 0,
+						"bulletDamage": 0
+					},
 					"behaviors": {},
 					"template": {
 						"mode": "template",
@@ -220,7 +243,28 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "fireRate",
+												"state": true
+											},
+											{
+												"iv": "leftJam",
+												"state": true
+											},
+											{
+												"iv": "rightJam",
+												"state": true
+											},
+											{
+												"iv": "bulletSpeed",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -348,7 +392,10 @@
 						"live-preview": false
 					},
 					"uid": 15,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"acceleration": 0,
+						"turnSpeed": 0
+					},
 					"behaviors": {},
 					"template": {
 						"mode": "template",
@@ -386,7 +433,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "acceleration",
+												"state": true
+											},
+											{
+												"iv": "turnSpeed",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -514,7 +570,11 @@
 						"live-preview": false
 					},
 					"uid": 16,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"shields": 0,
+						"generator": 0
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {
@@ -558,7 +618,20 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "shields",
+												"state": true
+											},
+											{
+												"iv": "generator",
+												"state": true
+											},
+											{
+												"iv": "hp",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -696,7 +769,13 @@
 						"live-preview": false
 					},
 					"uid": 17,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"fireRate": 0,
+						"leftJam": false,
+						"rightJam": false,
+						"bulletSpeed": 0,
+						"bulletDamage": 0
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {
@@ -740,7 +819,28 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "fireRate",
+												"state": true
+											},
+											{
+												"iv": "leftJam",
+												"state": true
+											},
+											{
+												"iv": "rightJam",
+												"state": true
+											},
+											{
+												"iv": "bulletSpeed",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -878,7 +978,10 @@
 						"live-preview": false
 					},
 					"uid": 18,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"acceleration": 0,
+						"turnSpeed": 0
+					},
 					"behaviors": {
 						"Tween": {
 							"properties": {
@@ -922,7 +1025,16 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "acceleration",
+												"state": true
+											},
+											{
+												"iv": "turnSpeed",
+												"state": true
+											}
+										]
 									}
 								]
 							},

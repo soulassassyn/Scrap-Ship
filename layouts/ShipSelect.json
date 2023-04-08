@@ -244,9 +244,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.9372549019607843,
-							0.6784313725490196,
-							0.41568627450980394,
+							0.21176470588235294,
+							0.2823529411764706,
+							0.30196078431372547,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -573,7 +573,7 @@
 				{
 					"type": "alignShip",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "align",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -599,6 +599,830 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "HP",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 38,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 400,
+						"y": 203,
+						"width": 56.871189627300055,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Shields",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 40,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 473,
+						"y": 203,
+						"width": 56.87118962730011,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Regen",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 42,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 546,
+						"y": 203,
+						"width": 56.52069572781869,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"instanceVariables": {
+						"State": "hp"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 398,
+						"y": 226,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 45,
+					"instanceVariables": {
+						"State": "shields"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 471,
+						"y": 226,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 46,
+					"instanceVariables": {
+						"State": "generator"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 544,
+						"y": 226,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Rate",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 47,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 400.2257995605469,
+						"y": 252.40693155924478,
+						"width": 56.871189627300055,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Speed",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 48,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 473.2257995605469,
+						"y": 252.40693155924478,
+						"width": 56.87118962730011,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Damage",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 49,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 546.2257995605469,
+						"y": 252.40693155924478,
+						"width": 56.52069572781869,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 50,
+					"instanceVariables": {
+						"State": "fireRate"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 398.2257995605469,
+						"y": 275.40693155924475,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 51,
+					"instanceVariables": {
+						"State": "bulletSpeed"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 471.2257995605469,
+						"y": 275.40693155924475,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 52,
+					"instanceVariables": {
+						"State": "bulletDamage"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 544.2257995605469,
+						"y": 275.40693155924475,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Accel",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 56,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 400.3196105957031,
+						"y": 299.1258646647136,
+						"width": 56.87118962730011,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "coreStatText",
+					"properties": {
+						"text": "Agility",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 57,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 473.3196105957031,
+						"y": 299.1258646647136,
+						"width": 56.52069572781869,
+						"height": 15.118414571309472,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 58,
+					"instanceVariables": {
+						"State": "acceleration"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 398.3196105957031,
+						"y": 322.12586466471356,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBarFill",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 59,
+					"instanceVariables": {
+						"State": "turnSpeed"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 471.3196105957031,
+						"y": 322.12586466471356,
+						"width": 1,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 396,
+						"y": 226,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 469,
+						"y": 226,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 542,
+						"y": 226,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 396.2257995605469,
+						"y": 275.40693155924475,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 54,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 469.2257995605469,
+						"y": 275.40693155924475,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 55,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 542.2257995605469,
+						"y": 275.40693155924475,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 60,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 396.3196105957031,
+						"y": 322.12586466471356,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "indicatorBar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "indicatorBar",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 61,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 469.3196105957031,
+						"y": 322.12586466471356,
+						"width": 64,
+						"height": 16,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
 					}
 				}
 			],
