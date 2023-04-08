@@ -515,7 +515,13 @@
 					},
 					"uid": 16,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "grid",
@@ -558,7 +564,17 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -681,7 +697,13 @@
 					},
 					"uid": 17,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "grid",
@@ -724,7 +746,17 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -847,7 +879,13 @@
 					},
 					"uid": 18,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "grid",
@@ -890,7 +928,17 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -1243,6 +1291,35 @@
 						"y": 229.35974540344148,
 						"width": 64,
 						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "rarityBox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "rarityBox",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 465.3743614184706,
+						"y": 48.16360127866693,
+						"width": 72,
+						"height": 72,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -1,0 +1,89 @@
+{
+	"name": "launchButton",
+	"plugin-id": "Sprite",
+	"sid": 939854225171812,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2871841,
+						"collisionPoly": {
+							"points": [
+								0.020833333333333332,
+								0.0625,
+								0.5,
+								0,
+								0.9791666666666666,
+								0.0625,
+								1,
+								0.5,
+								0.9791666666666666,
+								0.9375,
+								0.5,
+								1,
+								0.020833333333333332,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 96,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1978925,
+						"collisionPoly": {
+							"points": [
+								0.020833333333333332,
+								0.0625,
+								0.5,
+								0,
+								0.9791666666666666,
+								0.0625,
+								1,
+								0.5,
+								0.9791666666666666,
+								0.9375,
+								0.5,
+								1,
+								0.020833333333333332,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 546261918876372,
+				"name": "button",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

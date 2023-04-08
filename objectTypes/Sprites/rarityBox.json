@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "rarityBox",
 	"plugin-id": "Sprite",
-	"sid": 288210479202875,
+	"sid": 264309321825427,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,40 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 1,
-						"originY": 0,
+						"width": 72,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6999058,
+						"imageSpriteId": 931109,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.5,
+								1,
+								1,
+								0.5,
+								1,
+								0,
+								1,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 106520581374677,
-				"name": "Animation 1",
+				"sid": 755277961916318,
+				"name": "rarityBox",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

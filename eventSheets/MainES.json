@@ -10,6 +10,14 @@
 			"includeSheet": "Functions"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "PanelES"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ShipSelectES"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

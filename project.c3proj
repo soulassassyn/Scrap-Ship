@@ -54,6 +54,13 @@
 			"name": "Touch",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "7lwgnln2lul",
@@ -66,9 +73,9 @@
 			"DEBUG",
 			"MenuTitle",
 			"MenuItems",
-			"enemyShip",
-			"enemyWeapon",
-			"enemyEngine"
+			"gridTitle",
+			"launchButtonText",
+			"tabTitle"
 		],
 		"subfolders": [
 			{
@@ -81,7 +88,16 @@
 					"gridShip",
 					"gridEngine",
 					"gridWeapon",
-					"engineerBay"
+					"engineerBay",
+					"align",
+					"enemyEngine",
+					"enemyShip",
+					"enemyWeapon",
+					"rarityBox",
+					"launchButton",
+					"shipStats",
+					"tab",
+					"alignShip"
 				],
 				"subfolders": [],
 				"name": "Sprites"
@@ -290,7 +306,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-integer-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -311,7 +327,7 @@
 			1,
 			0
 		],
-		"orientations": "any",
+		"orientations": "landscape",
 		"webgpu": "auto",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",

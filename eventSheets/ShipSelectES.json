@@ -1,5 +1,411 @@
 {
 	"name": "ShipSelectES",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "currentPage",
+			"type": "string",
+			"initialValue": "gridShip",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 113884405247036
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 817159112882727
+				}
+			],
+			"actions": [],
+			"sid": 678890215888618,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.spriteGrids.rarityBox.create();"
+						},
+						{
+							"type": "script",
+							"script": "runtime.spriteGrids.gridShip.create();"
+						}
+					],
+					"sid": 484879518268458
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 817584300042282,
+					"parameters": {
+						"object": "launchButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "launchButton",
+					"sid": 323587479602776,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 341032044695842
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 355971925560538,
+					"parameters": {
+						"object": "launchButton"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "launchButton",
+					"sid": 630303033230845,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 317427417471446
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 847487505951937,
+					"parameters": {
+						"object": "tab"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 340611444382741,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 809012766431059,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"core\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 648901877391798,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 420662660851880,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 650507986221494,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridShip\");"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 110054959432819,
+									"parameters": {
+										"variable": "currentPage",
+										"value": "\"gridShip\""
+									}
+								}
+							],
+							"sid": 493061441372095
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 185363982617181,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"weapon\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 576916591591591,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 754958659531396,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 241212260985803,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridWeapon\");"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 639776214401084,
+									"parameters": {
+										"variable": "currentPage",
+										"value": "\"gridWeapon\""
+									}
+								}
+							],
+							"sid": 324590058317178
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 531128350191170,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"engine\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 836865196458106,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 281075447624182,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 617901516061306,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridEngine\");"
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 618791473425103,
+									"parameters": {
+										"variable": "currentPage",
+										"value": "\"gridEngine\""
+									}
+								}
+							],
+							"sid": 799384476116509
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 709118018993977,
+					"parameters": {
+						"object": "tab"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 625833669354984,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 138768384680839,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"core\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 150419510860924,
+							"parameters": {
+								"variable": "currentPage",
+								"comparison": 1,
+								"value": "\"gridShip\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 745293313151630,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 606831894122445
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 131380716329841,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"weapon\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 221497143540527,
+							"parameters": {
+								"variable": "currentPage",
+								"comparison": 1,
+								"value": "\"gridWeapon\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 567484081766003,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 201936442587744
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tab",
+							"sid": 606301217435854,
+							"parameters": {
+								"instance-variable": "thisTab",
+								"comparison": 0,
+								"value": "\"engine\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 657700086080790,
+							"parameters": {
+								"variable": "currentPage",
+								"comparison": 1,
+								"value": "\"gridEngine\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "tab",
+							"sid": 261357020651270,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 816535495303784
+				}
+			]
+		}
+	],
 	"sid": 655491153243623
 }
