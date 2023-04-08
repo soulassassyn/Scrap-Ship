@@ -75,7 +75,22 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"callFunction": "layerOff",
+					"sid": 647414323995805,
+					"parameters": [
+						"\"menu\""
+					]
+				},
+				{
+					"callFunction": "layerOn",
+					"sid": 285590663692203,
+					"parameters": [
+						"\"shipGrid\""
+					]
+				}
+			],
 			"sid": 689651220899543
 		},
 		{
@@ -104,33 +119,6 @@
 			],
 			"actions": [],
 			"sid": 545418816933099
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 199594600681899,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "MenuItems"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "MenuItems",
-					"sid": 251122841643426,
-					"parameters": {
-						"instance-variable": "State",
-						"comparison": 0,
-						"value": "\"exit\""
-					}
-				}
-			],
-			"actions": [],
-			"sid": 629293394172241
 		}
 	],
 	"sid": 378499130998555

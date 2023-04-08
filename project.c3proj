@@ -65,13 +65,23 @@
 			"Audio",
 			"DEBUG",
 			"MenuTitle",
-			"MenuItems"
+			"MenuItems",
+			"enemyShip",
+			"enemyWeapon",
+			"enemyEngine"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Sprite",
-					"bg"
+					"bg",
+					"playerShip",
+					"playerWeapon",
+					"playerEngine",
+					"gridShip",
+					"gridEngine",
+					"gridWeapon",
+					"engineerBay"
 				],
 				"subfolders": [],
 				"name": "Sprites"

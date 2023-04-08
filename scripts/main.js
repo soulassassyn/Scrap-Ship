@@ -23,10 +23,7 @@ async function OnBeforeProjectStart(runtime)
 	initializeSpriteGrid(runtime, runtime.globalVars.gridName, 3, 3, 10);
 	
 	// List of objects effected by the MouseHoverEffect class
-	const mouseHoverCoreThumbs = new MouseHoverEffect(runtime, "coreThumbs");
-	const mouseHoverWeaponThumbs = new MouseHoverEffect(runtime, "weaponThumbs");
-	const mouseHoverEngineThumbs = new MouseHoverEffect(runtime, "engineThumbs");
-	const mouseHoverArrows = new MouseHoverEffect(runtime, "arrows", 2.25, 2, 0.1);
+// 	const mouseHoverArrows = new MouseHoverEffect(runtime, "arrows", 2.25, 2, 0.1);
 	
 	// Enemy spawner
 	const enemySpawner = new EnemySpawner(runtime);

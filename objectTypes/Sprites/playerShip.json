@@ -1,0 +1,119 @@
+{
+	"name": "playerShip",
+	"plugin-id": "Sprite",
+	"sid": 261807330150518,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 34,
+						"height": 33,
+						"originX": 0.5,
+						"originY": 0.48484848484848486,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7627348,
+						"collisionPoly": {
+							"points": [
+								0.2647058823529412,
+								0.24242424242424243,
+								0.5,
+								0,
+								0.7352941176470589,
+								0.24242424242424243,
+								1,
+								0.6515151515151526,
+								0.9975490196078428,
+								0.8863636363636364,
+								0.5,
+								1,
+								0,
+								0.8813131313131312,
+								0,
+								0.6439393939393937
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 36,
+						"height": 28,
+						"originX": 0.5,
+						"originY": 0.39285714285714285,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 957406,
+						"collisionPoly": {
+							"points": [
+								0.3333333333333333,
+								0.17857142857142858,
+								0.5,
+								0,
+								0.6666666666666666,
+								0.17857142857142858,
+								0.9768518518518516,
+								0.5892857142857151,
+								0.976851851851852,
+								0.9880952380952378,
+								0.5,
+								1,
+								0.027777777777777776,
+								1,
+								0.02314814814814787,
+								0.5833333333333345
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 34,
+						"height": 42,
+						"originX": 0.5,
+						"originY": 0.5952380952380952,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5201735,
+						"collisionPoly": {
+							"points": [
+								0.37745098039215713,
+								0.00793650793650795,
+								0.6250000000000002,
+								0.011904761904761968,
+								1,
+								0.742063492063492,
+								1,
+								0.8968253968253967,
+								0.5,
+								1,
+								0.0024509803921569846,
+								0.8988095238095238,
+								0,
+								0.7361111111111113
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 370184959743597,
+				"name": "playerShip",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
