@@ -1,12 +1,12 @@
 {
-	"name": "Panel",
+	"name": "ShipSelect",
 	"layers": [
 		{
 			"name": "background",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 711445937187819,
+			"sid": 775647393691667,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -39,7 +39,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 618876533355195,
+			"sid": 318805633601475,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -68,7 +68,7 @@
 			"global": false
 		},
 		{
-			"name": "panel",
+			"name": "shipGrid",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -81,13 +81,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
+					"uid": 9,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 640,
 						"y": 0,
-						"width": 210,
+						"width": 280,
 						"height": 360,
 						"originX": 1,
 						"originY": 0,
@@ -102,7 +102,7 @@
 					}
 				}
 			],
-			"sid": 521673685022907,
+			"sid": 415253029311991,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -131,7 +131,7 @@
 			"global": true
 		}
 	],
-	"sid": 926365709041547,
+	"sid": 639517992028147,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 640,

@@ -36,6 +36,20 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -49,9 +63,20 @@
 			"Mouse",
 			"Touch",
 			"Audio",
-			"DEBUG"
+			"DEBUG",
+			"MenuTitle",
+			"MenuItems"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Sprite",
+					"bg"
+				],
+				"subfolders": [],
+				"name": "Sprites"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -62,15 +87,20 @@
 	"layouts": {
 		"items": [
 			"Main",
-			"Arena",
-			"Panel"
+			"Menu",
+			"ShipSelect",
+			"Panel",
+			"Templates"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
+			"Globals",
+			"Functions",
 			"MainES",
-			"Globals"
+			"ShipSelectES",
+			"PanelES"
 		],
 		"subfolders": []
 	},
@@ -92,6 +122,30 @@
 					"script-info": {
 						"purpose": "imports-for-events"
 					}
+				},
+				{
+					"name": "spriteGrid.js",
+					"type": "application/javascript",
+					"sid": 671080675302603,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mouseHover.js",
+					"type": "application/javascript",
+					"sid": 386124694924420,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "enemySpawner.js",
+					"type": "application/javascript",
+					"sid": 652687662740975,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -109,7 +163,32 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "ABSTRACT.TTF",
+					"type": "application/font-sfnt",
+					"sid": 895415307227824,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "advanced_pixel_lcd-7.ttf",
+					"type": "application/font-sfnt",
+					"sid": 640479457362044,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Retro Gaming.ttf",
+					"type": "application/font-sfnt",
+					"sid": 160492452847796,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -194,7 +273,7 @@
 		"version": "1.0.0.0",
 		"author": "Kyle Hodge",
 		"authorEmail": "",
-		"authorWebsite": "",
+		"authorWebsite": "https://ilovepixelart.itch.io/",
 		"appId": "",
 		"pixelRounding": true,
 		"zAxisScale": "normalized",
@@ -235,7 +314,7 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "progress",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
@@ -244,5 +323,5 @@
 	},
 	"viewportWidth": 640,
 	"viewportHeight": 360,
-	"firstLayout": null
+	"firstLayout": "Main"
 }

@@ -4,6 +4,133 @@
 		{
 			"eventType": "include",
 			"includeSheet": "Globals"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Functions"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 554132120588969
+				}
+			],
+			"actions": [],
+			"sid": 712094331832481,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "layerOff",
+							"sid": 145722964882196,
+							"parameters": [
+								"\"panel\""
+							]
+						},
+						{
+							"callFunction": "layerOff",
+							"sid": 475430479557696,
+							"parameters": [
+								"\"shipGrid\""
+							]
+						},
+						{
+							"callFunction": "layerOff",
+							"sid": 808154739114011,
+							"parameters": [
+								"\"arena\""
+							]
+						}
+					],
+					"sid": 704271163603032
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 169608797450645,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MenuItems"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "MenuItems",
+					"sid": 174742701617334,
+					"parameters": {
+						"instance-variable": "State",
+						"comparison": 0,
+						"value": "\"start\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 689651220899543
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 544949833554125,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MenuItems"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "MenuItems",
+					"sid": 245774193663886,
+					"parameters": {
+						"instance-variable": "State",
+						"comparison": 0,
+						"value": "\"options\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 545418816933099
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 199594600681899,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MenuItems"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "MenuItems",
+					"sid": 251122841643426,
+					"parameters": {
+						"instance-variable": "State",
+						"comparison": 0,
+						"value": "\"exit\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 629293394172241
 		}
 	],
 	"sid": 378499130998555

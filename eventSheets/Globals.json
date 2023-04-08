@@ -1,5 +1,86 @@
 {
 	"name": "Globals",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "weaponFireRate",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 694295484349293
+		},
+		{
+			"eventType": "variable",
+			"name": "bulletSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 727004652547446
+		},
+		{
+			"eventType": "variable",
+			"name": "weaponLeftJam",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 657811755069236
+		},
+		{
+			"eventType": "variable",
+			"name": "weaponRightJam",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190383433109763
+		},
+		{
+			"eventType": "variable",
+			"name": "shieldGenerator",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762164530789831
+		},
+		{
+			"eventType": "variable",
+			"name": "shieldMax",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 332269409620301
+		},
+		{
+			"eventType": "variable",
+			"name": "engineAcceleration",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 474915725194217
+		},
+		{
+			"eventType": "variable",
+			"name": "engineTurnSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 579922612073215
+		}
+	],
 	"sid": 380652354289867
 }

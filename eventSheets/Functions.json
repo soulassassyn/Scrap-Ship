@@ -1,0 +1,102 @@
+{
+	"name": "Functions",
+	"events": [
+		{
+			"functionName": "layerOff",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "layerName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 735723713934991
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 269888556685546,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 445904515716144,
+							"parameters": {
+								"layer": "layerName",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 219119005112928,
+							"parameters": {
+								"layer": "layerName",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 203662193808113
+				}
+			]
+		},
+		{
+			"functionName": "layerOn",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "layerName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 882333743192316
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 904081884225941,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 127133524625384,
+							"parameters": {
+								"layer": "layerName",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 119364179614090,
+							"parameters": {
+								"layer": "layerName",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 949097138716854
+				}
+			]
+		}
+	],
+	"sid": 214159237481150
+}

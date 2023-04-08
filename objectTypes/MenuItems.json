@@ -1,0 +1,17 @@
+{
+	"name": "MenuItems",
+	"plugin-id": "Text",
+	"sid": 936370061810837,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 432540032209329
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
