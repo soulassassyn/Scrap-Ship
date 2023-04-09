@@ -21,7 +21,25 @@
 						"shields": 0,
 						"generator": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Wrap": {
+							"properties": {
+								"wrap-to": "layout"
+							}
+						},
+						"Custom": {
+							"properties": {
+								"stepping-mode": "none",
+								"pixels-per-step": 5,
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "player",
@@ -77,7 +95,43 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Wrap",
+										"state": [
+											[
+												"wrap-to",
+												true
+											]
+										]
+									},
+									{
+										"key": "Custom",
+										"state": [
+											[
+												"stepping-mode",
+												true
+											],
+											[
+												"pixels-per-step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Tween",
+										"state": [
+											[
+												"enabled",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -206,7 +260,13 @@
 						"bulletSpeed": 0,
 						"bulletDamage": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "player",
@@ -270,7 +330,17 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Pin",
+										"state": [
+											[
+												"destroy",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -396,7 +466,13 @@
 						"acceleration": 0,
 						"turnSpeed": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"template": {
 						"mode": "template",
 						"templateName": "player",
@@ -448,7 +524,17 @@
 							},
 							{
 								"id": "behavior",
-								"component": []
+								"component": [
+									{
+										"key": "Pin",
+										"state": [
+											[
+												"destroy",
+												true
+											]
+										]
+									}
+								]
 							},
 							{
 								"id": "effect",
@@ -620,15 +706,15 @@
 										"key": "instance-variable",
 										"state": [
 											{
+												"iv": "hp",
+												"state": true
+											},
+											{
 												"iv": "shields",
 												"state": true
 											},
 											{
 												"iv": "generator",
-												"state": true
-											},
-											{
-												"iv": "hp",
 												"state": true
 											}
 										]
@@ -1433,6 +1519,240 @@
 						"width": 72,
 						"height": 72,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "bullet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "weapon_01",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 67,
+					"instanceVariables": {
+						"bulletDamage": 0
+					},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 50,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": true,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 0.5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 223.0118038302314,
+						"y": 335.450771678603,
+						"width": 16,
+						"height": 7,
+						"originX": 0.5,
+						"originY": 0.42857142857142855,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "engineAnimation",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "engine_01_00",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 68,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 283.4105203655194,
+						"y": 201.5575721416639,
+						"width": 102,
+						"height": 112,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "bulletInit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 69,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 100,
+								"acceleration": 100,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 224.7052346496933,
+						"y": 322.9759009654032,
+						"width": 15,
+						"height": 7,
+						"originX": 0.5333333333333333,
+						"originY": 0.42857142857142855,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "missileExhaust",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 70,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 228.8823451617682,
+						"y": 308.75116400007033,
+						"width": 14,
+						"height": 6,
+						"originX": 0.9285714285714286,
+						"originY": 0.3333333333333333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "missileParticles",
+					"properties": {
+						"rate": 100,
+						"spray-cone": 5,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 10,
+						"size": 4,
+						"opacity": 80,
+						"grow-rate": -40,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": -10,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 71,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 200.09416598841332,
+						"y": 276.1457592227023,
+						"width": 54.235233961365424,
+						"height": 54.235233961365424,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,

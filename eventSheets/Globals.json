@@ -80,6 +80,46 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 505024464822189
+		},
+		{
+			"eventType": "variable",
+			"name": "playerShipFrame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 925724414915339
+		},
+		{
+			"eventType": "variable",
+			"name": "playerWeaponFrame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 969836635153977
+		},
+		{
+			"eventType": "variable",
+			"name": "playerEngineFrame",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 992659827234255
+		},
+		{
+			"eventType": "variable",
+			"name": "fireActive",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 390357002724226
 		}
 	],
 	"sid": 380652354289867

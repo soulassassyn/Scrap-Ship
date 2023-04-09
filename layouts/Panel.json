@@ -71,37 +71,7 @@
 			"name": "panel",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "Sprite",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 8,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 640,
-						"y": 0,
-						"width": 210,
-						"height": 360,
-						"originX": 1,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 521673685022907,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

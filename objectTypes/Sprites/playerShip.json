@@ -26,7 +26,23 @@
 			"sid": 390961119953967
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "wrap",
+			"name": "Wrap",
+			"sid": 636737051690084
+		},
+		{
+			"behaviorId": "custom",
+			"name": "Custom",
+			"sid": 767953616017425
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 672227370838139
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -62,6 +78,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "leftWeapon",
+								"x": 0.42424242424242425,
+								"y": -0.058823529411764705
+							},
+							{
+								"name": "rightWeapon",
+								"x": 0.42424242424242425,
+								"y": 1.0294117647058822
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -94,6 +122,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "leftWeapon",
+								"x": 0.42424242424242425,
+								"y": -0.058823529411764705
+							},
+							{
+								"name": "rightWeapon",
+								"x": 0.42424242424242425,
+								"y": 1.0294117647058822
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -124,6 +164,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "leftWeapon",
+								"x": 0.42424242424242425,
+								"y": -0.058823529411764705
+							},
+							{
+								"name": "rightWeapon",
+								"x": 0.42424242424242425,
+								"y": 1.0294117647058822
+							}
+						],
 						"duration": 1
 					}
 				],

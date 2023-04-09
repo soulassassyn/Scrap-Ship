@@ -581,7 +581,7 @@
 					},
 					"uid": 37,
 					"instanceVariables": {
-						"State": ""
+						"State": "bay"
 					},
 					"behaviors": {},
 					"world": {

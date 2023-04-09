@@ -40,7 +40,13 @@
 			"sid": 604471032963741
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 669637208026295
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

@@ -88,6 +88,83 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 819986444892978,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "launchButton"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 846630788576659,
+					"parameters": {
+						"variable": "readyForLaunch"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 111074656832573,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "playerShip",
+							"sid": 749712190555747
+						},
+						{
+							"id": "destroy",
+							"objectClass": "playerWeapon",
+							"sid": 451746394108271
+						},
+						{
+							"id": "destroy",
+							"objectClass": "playerEngine",
+							"sid": 251851368647455
+						}
+					],
+					"sid": 463540604134020
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "layerOff",
+							"sid": 224052662659213,
+							"parameters": [
+								"\"shipGrid\""
+							]
+						},
+						{
+							"callFunction": "layerOn",
+							"sid": 712968448541016,
+							"parameters": [
+								"\"panel\""
+							]
+						},
+						{
+							"callFunction": "layerOn",
+							"sid": 795803557758702,
+							"parameters": [
+								"\"arena\""
+							]
+						}
+					],
+					"sid": 324118984974275
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 312819006066595,
@@ -629,6 +706,15 @@
 						"variable": "shipSelected",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 979107241287233,
+					"parameters": {
+						"variable": "playerShipFrame",
+						"value": "gridShip.AnimationFrame"
+					}
 				}
 			],
 			"sid": 333383133769939,
@@ -705,6 +791,15 @@
 					"parameters": {
 						"variable": "weaponSelected",
 						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 293324519150901,
+					"parameters": {
+						"variable": "playerWeaponFrame",
+						"value": "gridWeapon.AnimationFrame"
 					}
 				}
 			],
@@ -783,6 +878,15 @@
 						"variable": "engineSelected",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 646652465951500,
+					"parameters": {
+						"variable": "playerEngineFrame",
+						"value": "gridEngine.AnimationFrame"
+					}
 				}
 			],
 			"sid": 477589981289256,
@@ -844,135 +948,155 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [
+					"conditions": [
 						{
-							"id": "create-object",
+							"id": "pick-by-comparison",
 							"objectClass": "System",
-							"sid": 455168216762228,
+							"sid": 530934023887272,
 							"parameters": {
-								"object-to-create": "playerShip",
-								"layer": "\"shipGrid\"",
-								"x": "alignShip.X",
-								"y": "alignShip.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-angle",
-							"objectClass": "playerShip",
-							"sid": 543197339084429,
-							"parameters": {
-								"angle": "270"
-							}
-						},
-						{
-							"id": "set-scale",
-							"objectClass": "playerShip",
-							"sid": 449068434843051,
-							"parameters": {
-								"scale": "2"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "playerShip",
-							"sid": 657422793509332,
-							"parameters": {
-								"visibility": "invisible"
+								"object": "alignShip",
+								"expression": "alignShip.State",
+								"comparison": 0,
+								"value": "\"bay\""
 							}
 						}
 					],
-					"sid": 113677379913412
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 130991067330359,
+					"children": [
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 896186615838621,
-							"parameters": {
-								"object-to-create": "playerWeapon",
-								"layer": "\"shipGrid\"",
-								"x": "alignShip.X",
-								"y": "alignShip.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 990444707098939,
+									"parameters": {
+										"object-to-create": "playerShip",
+										"layer": "\"shipGrid\"",
+										"x": "alignShip.X",
+										"y": "alignShip.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "playerShip",
+									"sid": 908683123149824,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "playerShip",
+									"sid": 977353198608777,
+									"parameters": {
+										"scale": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "playerShip",
+									"sid": 513511291094770,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 692843018942693
 						},
 						{
-							"id": "set-angle",
-							"objectClass": "playerWeapon",
-							"sid": 269295961639948,
-							"parameters": {
-								"angle": "270"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 692639341159553,
+									"parameters": {
+										"object-to-create": "playerWeapon",
+										"layer": "\"shipGrid\"",
+										"x": "alignShip.X",
+										"y": "alignShip.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "playerWeapon",
+									"sid": 753401179021557,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "playerWeapon",
+									"sid": 892480579354197,
+									"parameters": {
+										"scale": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "playerWeapon",
+									"sid": 370117009314741,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 500178872411358
 						},
 						{
-							"id": "set-scale",
-							"objectClass": "playerWeapon",
-							"sid": 457205948426919,
-							"parameters": {
-								"scale": "2"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "playerWeapon",
-							"sid": 230187817859813,
-							"parameters": {
-								"visibility": "invisible"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 264857068894819,
+									"parameters": {
+										"object-to-create": "playerEngine",
+										"layer": "\"shipGrid\"",
+										"x": "alignShip.X",
+										"y": "alignShip.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "playerEngine",
+									"sid": 425297927656861,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "playerEngine",
+									"sid": 991816007046071,
+									"parameters": {
+										"scale": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "playerEngine",
+									"sid": 258038520916273,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 197392199527945
 						}
-					],
-					"sid": 901983944124856
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 274448798941557,
-							"parameters": {
-								"object-to-create": "playerEngine",
-								"layer": "\"shipGrid\"",
-								"x": "alignShip.X",
-								"y": "alignShip.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-angle",
-							"objectClass": "playerEngine",
-							"sid": 899353415925286,
-							"parameters": {
-								"angle": "270"
-							}
-						},
-						{
-							"id": "set-scale",
-							"objectClass": "playerEngine",
-							"sid": 103733159446585,
-							"parameters": {
-								"scale": "2"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "playerEngine",
-							"sid": 290802224765431,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 335135208071438
+					]
 				},
 				{
 					"eventType": "block",
@@ -2015,7 +2139,7 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridEngine",
-											"sid": 665155837341055,
+											"sid": 216616028548549,
 											"parameters": {
 												"instance-variable": "turnSpeed",
 												"value": "30"
@@ -2085,10 +2209,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridEngine",
-											"sid": 546418665291427,
+											"sid": 139284955948442,
 											"parameters": {
 												"instance-variable": "turnSpeed",
-												"value": "50"
+												"value": "40"
 											}
 										}
 									],
