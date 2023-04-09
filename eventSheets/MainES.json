@@ -18,6 +18,10 @@
 			"includeSheet": "ShipSelectES"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "EnemyLogic"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

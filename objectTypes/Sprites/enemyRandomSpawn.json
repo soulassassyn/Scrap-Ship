@@ -1,0 +1,63 @@
+{
+	"name": "enemyRandomSpawn",
+	"plugin-id": "Sprite",
+	"sid": 378664720975905,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 419375002369183
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 149810846100649
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6262821,
+						"collisionPoly": {
+							"points": [
+								0.4296875,
+								0.4296875,
+								0.5703125,
+								0.4296875,
+								0.5703125,
+								0.5703125,
+								0.4296875,
+								0.5703125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 277640285948469,
+				"name": "enemySpawnLocation",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

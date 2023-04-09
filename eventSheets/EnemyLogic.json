@@ -1,0 +1,262 @@
+{
+	"name": "EnemyLogic",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "enemySpawnX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 865931193145711
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpawnY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 855879784237929
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-interactive",
+					"objectClass": "System",
+					"sid": 806334112490508,
+					"parameters": {
+						"layer": "\"arena\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 704440281536724,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 317290495859133
+						},
+						{
+							"id": "pick-random-instance",
+							"objectClass": "System",
+							"sid": 186011187871804,
+							"parameters": {
+								"object": "enemyRandomSpawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 698578047668214,
+							"parameters": {
+								"variable": "enemySpawnX",
+								"value": "enemyRandomSpawn.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 126013244121189,
+							"parameters": {
+								"variable": "enemySpawnY",
+								"value": "enemyRandomSpawn.Y"
+							}
+						}
+					],
+					"sid": 968556118790682
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "spawnGroup01",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 143409338500094,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "spawnRamEnemy",
+									"sid": 934726716309807,
+									"parameters": [
+										"12",
+										"22",
+										"\"enemy2\"",
+										"17"
+									]
+								}
+							],
+							"sid": 154147341991618
+						}
+					],
+					"sid": 280024514157691
+				}
+			]
+		},
+		{
+			"functionName": "spawnRamEnemy",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "staticPick",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 414762058230596
+				},
+				{
+					"name": "moveTo",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 812278495552330
+				},
+				{
+					"name": "template",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 746919275210200
+				},
+				{
+					"name": "endPoint",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 811622983686871
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 306079864338847,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 861694015834358,
+							"parameters": {
+								"object": "enemyStaticSpawn",
+								"expression": "enemyStaticSpawn.staticPick",
+								"comparison": 0,
+								"value": "staticPick"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 587265167234717,
+							"parameters": {
+								"object-to-create": "enemyShip",
+								"layer": "enemyStaticSpawn.LayerName",
+								"x": "enemyStaticSpawn.X",
+								"y": "enemyStaticSpawn.Y",
+								"create-hierarchy": true,
+								"template-name": "template"
+							}
+						}
+					],
+					"sid": 435552884038853
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 392450772732557,
+							"parameters": {
+								"object": "enemyStaticSpawn",
+								"expression": "enemyStaticSpawn.staticPick",
+								"comparison": 0,
+								"value": "moveTo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-object",
+							"objectClass": "enemyShip",
+							"sid": 825149074596376,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "enemyStaticSpawn",
+								"image-point": "0",
+								"mode": "add-waypoint"
+							}
+						}
+					],
+					"sid": 550995233638363
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 675396131140976,
+							"parameters": {
+								"object": "enemyStaticSpawn",
+								"expression": "enemyStaticSpawn.staticPick",
+								"comparison": 0,
+								"value": "endPoint"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 856784982073016,
+							"parameters": {
+								"seconds": "4"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "enemyShip",
+							"sid": 790275743574226,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "enemyStaticSpawn",
+								"image-point": "0",
+								"mode": "add-waypoint"
+							}
+						}
+					],
+					"sid": 497863468911364
+				}
+			]
+		}
+	],
+	"sid": 204189974493288
+}

@@ -71,6 +71,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -165,7 +172,9 @@
 					"plasmaBullet",
 					"energyCharge",
 					"energyBlast",
-					"energyBullet"
+					"energyBullet",
+					"enemyRandomSpawn",
+					"enemyStaticSpawn"
 				],
 				"subfolders": [
 					{
@@ -213,7 +222,8 @@
 			"Functions",
 			"MainES",
 			"ShipSelectES",
-			"PanelES"
+			"PanelES",
+			"EnemyLogic"
 		],
 		"subfolders": []
 	},
