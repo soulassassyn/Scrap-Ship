@@ -992,9 +992,9 @@
 								{
 									"id": "set-scale",
 									"objectClass": "playerShip",
-									"sid": 977353198608777,
+									"sid": 341717019753949,
 									"parameters": {
-										"scale": "2"
+										"scale": "4"
 									}
 								},
 								{
@@ -1036,9 +1036,9 @@
 								{
 									"id": "set-scale",
 									"objectClass": "playerWeapon",
-									"sid": 892480579354197,
+									"sid": 988771962748957,
 									"parameters": {
-										"scale": "2"
+										"scale": "4"
 									}
 								},
 								{
@@ -1080,9 +1080,9 @@
 								{
 									"id": "set-scale",
 									"objectClass": "playerEngine",
-									"sid": 991816007046071,
+									"sid": 241846071718524,
 									"parameters": {
-										"scale": "2"
+										"scale": "4"
 									}
 								},
 								{
@@ -1288,9 +1288,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 738495251386198,
+									"sid": 132113240239159,
 									"parameters": {
-										"width": "(hp / 100) * 64"
+										"width": "(hp / 100) * 128"
 									}
 								}
 							],
@@ -1315,9 +1315,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 943780172307166,
+									"sid": 660090850452500,
 									"parameters": {
-										"width": "(shields/ 100) * 64"
+										"width": "(shields/ 100) * 128"
 									}
 								}
 							],
@@ -1342,9 +1342,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 534992519041922,
+									"sid": 488850442327087,
 									"parameters": {
-										"width": "(generator / 100) * 64"
+										"width": "(generator / 100) * 128"
 									}
 								}
 							],
@@ -1497,9 +1497,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 690838136623459,
+									"sid": 516852481561252,
 									"parameters": {
-										"width": "(fireRate / 100) * 64"
+										"width": "(fireRate / 100) * 128"
 									}
 								}
 							],
@@ -1524,9 +1524,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 821816491455810,
+									"sid": 215546047697411,
 									"parameters": {
-										"width": "(bulletSpeed/ 100) * 64"
+										"width": "(bulletSpeed/ 100) * 128"
 									}
 								}
 							],
@@ -1551,9 +1551,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 489067088700228,
+									"sid": 306105865462347,
 									"parameters": {
-										"width": "(bulletDamage / 100) * 64"
+										"width": "(bulletDamage / 100) * 128"
 									}
 								}
 							],
@@ -1678,9 +1678,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 345123829746430,
+									"sid": 394910750465946,
 									"parameters": {
-										"width": "(acceleration / 100) * 64"
+										"width": "(acceleration / 100) * 128"
 									}
 								}
 							],
@@ -1705,9 +1705,9 @@
 								{
 									"id": "set-width",
 									"objectClass": "indicatorBarFill",
-									"sid": 893021077119960,
+									"sid": 180681405486920,
 									"parameters": {
-										"width": "(turnSpeed/ 100) * 64"
+										"width": "(turnSpeed/ 100) * 128"
 									}
 								}
 							],

@@ -96,6 +96,100 @@
 					"sid": 949097138716854
 				}
 			]
+		},
+		{
+			"functionName": "pauseGame",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 897494412007979,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 312516327163334,
+							"parameters": {
+								"variable": "IsPaused"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 481190381440980,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 549204078840967,
+							"parameters": {
+								"variable": "IsPaused"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 174029440153577,
+							"parameters": {
+								"group-name": "\"shipControls\"",
+								"state": "toggle-active"
+							}
+						}
+					],
+					"sid": 950032645320218
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 178764397737751
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 874609875338640,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 377784898594322,
+							"parameters": {
+								"variable": "IsPaused"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 102169298189303,
+							"parameters": {
+								"group-name": "\"shipControls\"",
+								"state": "toggle-active"
+							}
+						}
+					],
+					"sid": 349969237492749
+				}
+			]
 		}
 	],
 	"sid": 214159237481150

@@ -423,7 +423,7 @@
 		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders"
 	},
-	"viewportWidth": 640,
-	"viewportHeight": 360,
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
 	"firstLayout": "Main"
 }

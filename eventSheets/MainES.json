@@ -63,6 +63,26 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 805041190866960,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "pauseGame",
+					"sid": 992539695999403
+				}
+			],
+			"sid": 272134033549342
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 169608797450645,
@@ -178,7 +198,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "PlayerControls",
+					"title": "shipControls",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -219,6 +239,23 @@
 												"acceleration": "playerAcceleration * 4",
 												"angle": "playerShip.Angle"
 											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "engineAnimation",
+											"sid": 942493304535368,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "100",
+												"time": ".1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
 										}
 									],
 									"sid": 771094164996370
@@ -227,165 +264,61 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "mouse-button-is-down",
-											"objectClass": "Mouse",
-											"sid": 342972349237312,
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 539712075281054,
 											"parameters": {
-												"mouse-button": "left"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 835183354112454,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 233411713347990,
-													"parameters": {
-														"variable": "fireActive"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "spawn-another-object",
-													"objectClass": "playerShip",
-													"sid": 264463652224923,
-													"parameters": {
-														"object": "bulletInit",
-														"layer": "playerShip.LayerName",
-														"image-point": "\"leftWeapon\"",
-														"create-hierarchy": false
-													}
-												},
-												{
-													"id": "spawn-another-object",
-													"objectClass": "playerShip",
-													"sid": 136278535068775,
-													"parameters": {
-														"object": "bulletInit",
-														"layer": "playerShip.LayerName",
-														"image-point": "\"rightWeapon\"",
-														"create-hierarchy": false
-													}
-												},
-												{
-													"id": "move-to-top",
-													"objectClass": "bulletInit",
-													"sid": 914264432619469
-												},
-												{
-													"id": "toggle-boolean-eventvar",
-													"objectClass": "System",
-													"sid": 883546702085710,
-													"parameters": {
-														"variable": "fireActive"
-													}
-												}
-											],
-											"sid": 643773204183642
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 648844294177186,
-											"parameters": {
-												"variable": "fireActive"
+												"key": 87
 											},
 											"isInverted": true
-										},
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 740841802861292
 										}
 									],
 									"actions": [
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 321228846484050,
+											"id": "tween-one-property",
+											"objectClass": "engineAnimation",
+											"sid": 355901944429463,
+											"behaviorType": "Tween",
 											"parameters": {
-												"seconds": "playerFireRate"
-											}
-										},
-										{
-											"id": "toggle-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 958276424881746,
-											"parameters": {
-												"variable": "fireActive"
+												"tags": "\"\"",
+												"property": "offsetOpacity",
+												"end-value": "0",
+												"time": ".05",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
 											}
 										}
 									],
-									"sid": 446105359416081
+									"sid": 515719247247441
 								},
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "on-animation-finished",
-											"objectClass": "bulletInit",
-											"sid": 635549232152857,
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 811417669525305,
 											"parameters": {
-												"animation": "\"Animation 1\""
+												"key": 83
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "spawn-another-object",
-											"objectClass": "bulletInit",
-											"sid": 796570577639076,
+											"id": "accelerate",
+											"objectClass": "playerShip",
+											"sid": 162860463285881,
+											"behaviorType": "Custom",
 											"parameters": {
-												"object": "bullet",
-												"layer": "bulletInit.LayerName",
-												"image-point": "0",
-												"create-hierarchy": false
+												"which": "forwards",
+												"acceleration": "-(playerAcceleration * 2)"
 											}
-										},
-										{
-											"id": "spawn-another-object",
-											"objectClass": "bullet",
-											"sid": 695849026328174,
-											"parameters": {
-												"object": "missileParticles",
-												"layer": "bullet.LayerName",
-												"image-point": "\"exhaust\"",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "pin-to-object-properties",
-											"objectClass": "missileParticles",
-											"sid": 275353831200535,
-											"behaviorType": "Pin",
-											"parameters": {
-												"pin-to": "bullet",
-												"x": true,
-												"y": true,
-												"angle": true,
-												"width-type": "no",
-												"height-type": "no",
-												"z": false
-											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "bulletInit",
-											"sid": 877184058191170
 										}
 									],
-									"sid": 767471819965038
+									"sid": 932403331290004
 								}
 							]
 						},
@@ -414,6 +347,195 @@
 						}
 					],
 					"sid": 300837877815344
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "weaponControls",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 324162293703203,
+									"parameters": {
+										"object": "playerShip"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 268189822960706,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 525405055819578,
+											"parameters": {
+												"first-value": "playerWeaponFrame",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 537203640676916,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "mouse-button-is-down",
+													"objectClass": "Mouse",
+													"sid": 713837796227442,
+													"parameters": {
+														"mouse-button": "left"
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 415524238420952,
+													"parameters": {
+														"variable": "fireActive"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 273659674659191,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 356107839756112,
+															"parameters": {
+																"object": "bulletInit",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"leftWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 885691490422654,
+															"parameters": {
+																"object": "bulletInit",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"rightWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "move-to-top",
+															"objectClass": "bulletInit",
+															"sid": 592766995130249
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 161017143912722,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "false"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 664215004490472,
+															"parameters": {
+																"seconds": "(100 - playerFireRate) / 100"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 332454631896106,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 703688300448495
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "bulletInit",
+													"sid": 651690457964126,
+													"parameters": {
+														"animation": "\"Animation 1\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "bulletInit",
+													"sid": 907186528985509,
+													"parameters": {
+														"object": "bullet",
+														"layer": "bulletInit.LayerName",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "bullet",
+													"sid": 432917021795661,
+													"parameters": {
+														"object": "missileParticles",
+														"layer": "bullet.LayerName",
+														"image-point": "\"exhaust\"",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "pin-to-object-properties",
+													"objectClass": "missileParticles",
+													"sid": 342687520276043,
+													"behaviorType": "Pin",
+													"parameters": {
+														"pin-to": "bullet",
+														"x": true,
+														"y": true,
+														"angle": true,
+														"width-type": "no",
+														"height-type": "no",
+														"z": false
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "bulletInit",
+													"sid": 147823518412847
+												}
+											],
+											"sid": 974896159061034
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 947890535138743
 				}
 			]
 		},

@@ -227,10 +227,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 43.80084217259912,
-						"y": 43.99669408397625,
-						"width": 33,
-						"height": 34,
+						"x": 522,
+						"y": 260,
+						"width": 49.5,
+						"height": 51,
 						"originX": 0.5151515151515151,
 						"originY": 0.5,
 						"color": [
@@ -436,10 +436,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 109.27535747863365,
-						"y": 45.989386966548636,
-						"width": 64,
-						"height": 64,
+						"x": 514,
+						"y": 388,
+						"width": 96,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -630,10 +630,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 182.09249479674793,
-						"y": 48.24727982177603,
-						"width": 64,
-						"height": 64,
+						"x": 643,
+						"y": 344,
+						"width": 96,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -829,10 +829,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 40.40952376586739,
-						"y": 135.17627651000856,
-						"width": 64,
-						"height": 64,
+						"x": 80,
+						"y": 545,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1038,10 +1038,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 116.04903411865234,
-						"y": 136.86968994140625,
-						"width": 64,
-						"height": 64,
+						"x": 215,
+						"y": 543,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1232,10 +1232,10 @@
 						"replicasUIDs": null
 					},
 					"world": {
-						"x": 194.51093365173244,
-						"y": 142.5144306744379,
-						"width": 64,
-						"height": 64,
+						"x": 356,
+						"y": 547,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1514,10 +1514,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 465.3743614184706,
-						"y": 48.16360127866693,
-						"width": 72,
-						"height": 72,
+						"x": 504,
+						"y": 88,
+						"width": 144,
+						"height": 144,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1797,8 +1797,8 @@
 	"sid": 629677163714244,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 640,
-	"height": 360,
+	"width": 1280,
+	"height": 720,
 	"unboundedScrolling": true,
 	"vpX": 0.5,
 	"vpY": 0.5,
