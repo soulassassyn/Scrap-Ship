@@ -263,7 +263,7 @@
 					"behaviors": {
 						"Pin": {
 							"properties": {
-								"destroy": false
+								"destroy": true
 							}
 						}
 					},
@@ -469,7 +469,7 @@
 					"behaviors": {
 						"Pin": {
 							"properties": {
-								"destroy": false
+								"destroy": true
 							}
 						}
 					},
@@ -2136,8 +2136,8 @@
 							"transformX": 0,
 							"transformY": 0,
 							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
 							"transformSX": 0,
 							"transformSY": 0,
@@ -2146,8 +2146,8 @@
 						}
 					},
 					"world": {
-						"x": 688,
-						"y": 412,
+						"x": 692.8770547556646,
+						"y": 438.0109586968782,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,
@@ -2199,8 +2199,8 @@
 							"transformX": 0,
 							"transformY": 0,
 							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
 							"transformSX": 0,
 							"transformSY": 0,
@@ -2209,8 +2209,8 @@
 						}
 					},
 					"world": {
-						"x": 688,
-						"y": 412,
+						"x": 692.8770547556646,
+						"y": 438.0109586968782,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,
@@ -2427,8 +2427,8 @@
 							"transformX": 0,
 							"transformY": 0,
 							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
 							"transformSX": 0,
 							"transformSY": 0,
@@ -2437,10 +2437,51 @@
 						}
 					},
 					"world": {
-						"x": 676,
-						"y": 412,
+						"x": 680.8770547556646,
+						"y": 438.0109586968782,
 						"width": 153,
 						"height": 168,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyBullet3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "enemyBullet",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 123,
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 683.0540651289722,
+						"y": 561.1098316285229,
+						"width": 12,
+						"height": 8,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2464,7 +2505,10 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"path": 0
+						"path": 0,
+						"hp": 50,
+						"damage": 15,
+						"bulletDamage": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -2483,6 +2527,18 @@
 								"stepping-mode": "none",
 								"pixels-per-step": 5,
 								"enabled": true
+							}
+						},
+						"Orbit": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"primary-axis": 100,
+								"secondary-axis": 100,
+								"offset-angle": 0,
+								"match-rotation": true,
+								"enabled": false,
+								"live-preview": false
 							}
 						}
 					},
@@ -2525,6 +2581,18 @@
 										"state": [
 											{
 												"iv": "path",
+												"state": true
+											},
+											{
+												"iv": "hp",
+												"state": true
+											},
+											{
+												"iv": "damage",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
 												"state": true
 											}
 										]
@@ -2576,6 +2644,39 @@
 											],
 											[
 												"pixels-per-step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Orbit",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"primary-axis",
+												true
+											],
+											[
+												"secondary-axis",
+												true
+											],
+											[
+												"offset-angle",
+												true
+											],
+											[
+												"match-rotation",
 												true
 											],
 											[
@@ -2782,7 +2883,10 @@
 					},
 					"uid": 79,
 					"instanceVariables": {
-						"path": 0
+						"path": 0,
+						"hp": 80,
+						"damage": 25,
+						"bulletDamage": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -2801,6 +2905,18 @@
 								"stepping-mode": "none",
 								"pixels-per-step": 5,
 								"enabled": true
+							}
+						},
+						"Orbit": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"primary-axis": 100,
+								"secondary-axis": 100,
+								"offset-angle": 0,
+								"match-rotation": true,
+								"enabled": false,
+								"live-preview": false
 							}
 						}
 					},
@@ -2843,6 +2959,18 @@
 										"state": [
 											{
 												"iv": "path",
+												"state": true
+											},
+											{
+												"iv": "hp",
+												"state": true
+											},
+											{
+												"iv": "damage",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
 												"state": true
 											}
 										]
@@ -2894,6 +3022,39 @@
 											],
 											[
 												"pixels-per-step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Orbit",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"primary-axis",
+												true
+											],
+											[
+												"secondary-axis",
+												true
+											],
+											[
+												"offset-angle",
+												true
+											],
+											[
+												"match-rotation",
 												true
 											],
 											[
@@ -3100,7 +3261,10 @@
 					},
 					"uid": 82,
 					"instanceVariables": {
-						"path": 0
+						"path": 0,
+						"hp": 100,
+						"damage": 50,
+						"bulletDamage": 0
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -3119,6 +3283,18 @@
 								"stepping-mode": "none",
 								"pixels-per-step": 5,
 								"enabled": true
+							}
+						},
+						"Orbit": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"primary-axis": 100,
+								"secondary-axis": 100,
+								"offset-angle": 0,
+								"match-rotation": true,
+								"enabled": false,
+								"live-preview": false
 							}
 						}
 					},
@@ -3161,6 +3337,18 @@
 										"state": [
 											{
 												"iv": "path",
+												"state": true
+											},
+											{
+												"iv": "hp",
+												"state": true
+											},
+											{
+												"iv": "damage",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
 												"state": true
 											}
 										]
@@ -3212,6 +3400,39 @@
 											],
 											[
 												"pixels-per-step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Orbit",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"primary-axis",
+												true
+											],
+											[
+												"secondary-axis",
+												true
+											],
+											[
+												"offset-angle",
+												true
+											],
+											[
+												"match-rotation",
 												true
 											],
 											[
@@ -3418,7 +3639,10 @@
 					},
 					"uid": 85,
 					"instanceVariables": {
-						"path": 0
+						"path": 0,
+						"hp": 35,
+						"damage": 5,
+						"bulletDamage": 20
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -3429,7 +3653,7 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": false,
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"Custom": {
@@ -3437,6 +3661,18 @@
 								"stepping-mode": "none",
 								"pixels-per-step": 5,
 								"enabled": true
+							}
+						},
+						"Orbit": {
+							"properties": {
+								"speed": 35,
+								"acceleration": 0,
+								"primary-axis": 250,
+								"secondary-axis": 250,
+								"offset-angle": 0,
+								"match-rotation": true,
+								"enabled": false,
+								"live-preview": false
 							}
 						}
 					},
@@ -3479,6 +3715,18 @@
 										"state": [
 											{
 												"iv": "path",
+												"state": true
+											},
+											{
+												"iv": "hp",
+												"state": true
+											},
+											{
+												"iv": "damage",
+												"state": true
+											},
+											{
+												"iv": "bulletDamage",
 												"state": true
 											}
 										]
@@ -3530,6 +3778,39 @@
 											],
 											[
 												"pixels-per-step",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "Orbit",
+										"state": [
+											[
+												"speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"primary-axis",
+												true
+											],
+											[
+												"secondary-axis",
+												true
+											],
+											[
+												"offset-angle",
+												true
+											],
+											[
+												"match-rotation",
 												true
 											],
 											[
@@ -3709,8 +3990,8 @@
 						}
 					},
 					"world": {
-						"x": 688,
-						"y": 412,
+						"x": 692.8770547556646,
+						"y": 438.0109586968782,
 						"width": 96,
 						"height": 96,
 						"originX": 0.5,

@@ -10,6 +10,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 257803321475263
+		},
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 561304991471789
+		},
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 437120309267962
+		},
+		{
+			"name": "bulletDamage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 823573094034484
 		}
 	],
 	"behaviorTypes": [
@@ -22,6 +43,11 @@
 			"behaviorId": "custom",
 			"name": "Custom",
 			"sid": 944679781026057
+		},
+		{
+			"behaviorId": "Orbit",
+			"name": "Orbit",
+			"sid": 795651894411063
 		}
 	],
 	"effectTypes": [],

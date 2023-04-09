@@ -218,6 +218,193 @@
 					"sid": 123605076466803
 				},
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 248733652124677,
+							"parameters": {
+								"variable": "playerShields",
+								"comparison": 2,
+								"value": "playerShieldsMax"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 209527333567451,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 197553842854339,
+							"parameters": {
+								"variable": "playerShields",
+								"value": "playerGenerator / 100"
+							}
+						}
+					],
+					"sid": 559680018268159
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 486152883346877,
+							"parameters": {
+								"variable": "playerHP",
+								"comparison": 2,
+								"value": "playerHPMax"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 312875351251762,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 606824359757993,
+							"parameters": {
+								"variable": "playerHP",
+								"value": "playerGenerator / 100"
+							}
+						}
+					],
+					"sid": 680592049690389
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 956284343513808,
+							"parameters": {
+								"object": "playerHP"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 526037319791785,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "playerHP",
+									"sid": 936714878879721,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 472338344458712
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "playerHP",
+									"sid": 282281781567646,
+									"parameters": {
+										"width": "clamp((playerHP * 2), 0, (playerHP * 2))"
+									}
+								}
+							],
+							"sid": 332672813818748
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 813386618129319,
+							"parameters": {
+								"object": "playerShield"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 324794976943887,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "playerShield",
+									"sid": 310340610742665,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 728577649198946
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "playerShield",
+									"sid": 229321412321314,
+									"parameters": {
+										"width": "clamp((playerShields * 2), 0, (playerShields * 2))"
+									}
+								}
+							],
+							"sid": 878049630127665
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 522488074222003,
+							"parameters": {
+								"variable": "playerHP",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "playerShip",
+							"sid": 843579337543077
+						}
+					],
+					"sid": 851658421744865
+				},
+				{
 					"eventType": "group",
 					"disabled": false,
 					"title": "shipControls",
@@ -1119,6 +1306,81 @@
 						}
 					],
 					"sid": 947890535138743
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "bulletControls",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "bullet",
+									"sid": 371879303534487,
+									"parameters": {
+										"object": "enemyShip"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "energyBullet",
+									"sid": 699499023975088,
+									"parameters": {
+										"object": "enemyShip"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "plasmaBullet",
+									"sid": 648533251113748,
+									"parameters": {
+										"object": "enemyShip"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 915062719901430,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "enemyShip",
+											"sid": 306252458184924,
+											"parameters": {
+												"instance-variable": "hp",
+												"value": "enemyShip.hp - playerBulletDamage"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "bullet",
+											"sid": 246185955120749
+										},
+										{
+											"id": "destroy",
+											"objectClass": "energyBullet",
+											"sid": 957975953048225
+										},
+										{
+											"id": "destroy",
+											"objectClass": "plasmaBullet",
+											"sid": 197045042410401
+										}
+									],
+									"sid": 870931133159862
+								}
+							],
+							"isOrBlock": true
+						}
+					],
+					"sid": 193767042245664
 				}
 			]
 		},

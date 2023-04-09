@@ -42,6 +42,26 @@
 			"sid": 430591637857590
 		},
 		{
+			"eventType": "variable",
+			"name": "spawnGroup3",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 256322333266063
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnLoop",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 150726429827462
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -99,6 +119,107 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemyShip",
+							"sid": 593355404271174,
+							"parameters": {
+								"object": "playerShip"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "damageToPlayer",
+							"sid": 663756055467349,
+							"parameters": [
+								"enemyShip.damage"
+							]
+						}
+					],
+					"sid": 488898636462621,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "enemyShip",
+									"sid": 994463206052918,
+									"parameters": {
+										"instance-variable": "hp",
+										"value": "enemyShip.hp - playerShipDamage"
+									}
+								}
+							],
+							"sid": 768842834386238
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "enemyBullet3",
+							"sid": 672117605270599,
+							"parameters": {
+								"object": "playerShip"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "damageToPlayer",
+							"sid": 824544372872340,
+							"parameters": [
+								"enemyShip.bulletDamage"
+							]
+						}
+					],
+					"sid": 553619565315823,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "enemyBullet3",
+									"sid": 333587844334157
+								}
+							],
+							"sid": 320411464475877
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "enemyShip",
+							"sid": 608659331429215,
+							"parameters": {
+								"instance-variable": "hp",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "enemyShip",
+							"sid": 258886473632073
+						}
+					],
+					"sid": 752872160981048
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
 							"sid": 911118052355926,
@@ -139,9 +260,42 @@
 							"parameters": {
 								"variable": "spawnGroup2"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 584338236353442,
+							"parameters": {
+								"variable": "spawnLoop",
+								"value": "0"
+							}
 						}
 					],
 					"sid": 403633011802286
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 506600425465694,
+							"parameters": {
+								"key": 51
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 572590765853786,
+							"parameters": {
+								"variable": "spawnGroup3"
+							}
+						}
+					],
+					"sid": 356230367328905
 				},
 				{
 					"eventType": "group",
@@ -499,27 +653,305 @@
 									"parameters": {
 										"variable": "spawnGroup2"
 									}
-								},
+								}
+							],
+							"actions": [],
+							"sid": 798715701263444,
+							"children": [
 								{
-									"id": "trigger-once-while-true",
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 543854557912258,
+											"parameters": {
+												"interval-seconds": "0.3"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 887863223890936,
+											"parameters": {
+												"variable": "spawnLoop",
+												"comparison": 3,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 982564229267549,
+											"parameters": {
+												"object-to-create": "enemyShip",
+												"layer": "\"arena\"",
+												"x": "enemySpawnX",
+												"y": "enemySpawnY",
+												"create-hierarchy": true,
+												"template-name": "\"enemy3\""
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 789716579143574,
+											"parameters": {
+												"variable": "spawnLoop",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 208113226662763
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 736615176166803
+									"sid": 988586758817735,
+									"parameters": {
+										"variable": "spawnLoop",
+										"comparison": 0,
+										"value": "5"
+									}
 								}
 							],
 							"actions": [
 								{
-									"id": "toggle-boolean-eventvar",
+									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 910111599702164,
+									"sid": 284629723059583,
 									"parameters": {
-										"variable": "spawnGroup2"
+										"variable": "spawnGroup2",
+										"value": "false"
 									}
 								}
 							],
-							"sid": 798715701263444
+							"sid": 190666070437181
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 438502129654406,
+									"parameters": {
+										"object": "enemyShip",
+										"expression": "enemyShip.TemplateName",
+										"comparison": 0,
+										"value": "\"enemy3\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-toward-position",
+									"objectClass": "enemyShip",
+									"sid": 665158786545650,
+									"parameters": {
+										"degrees": "5",
+										"x": "playerShip.X",
+										"y": "playerShip.Y"
+									}
+								},
+								{
+									"id": "accelerate-toward-position",
+									"objectClass": "enemyShip",
+									"sid": 351757125474783,
+									"behaviorType": "Custom",
+									"parameters": {
+										"acceleration": "50",
+										"x": "playerShip.X",
+										"y": "playerShip.Y"
+									}
+								}
+							],
+							"sid": 613186485141396,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 395894521685735,
+											"parameters": {
+												"interval-seconds": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "enemyShip",
+											"sid": 816564920478548,
+											"parameters": {
+												"object": "enemyBullet3",
+												"layer": "\"arena\"",
+												"image-point": "\"leftWeapon\"",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "enemyShip",
+											"sid": 890345277559531,
+											"parameters": {
+												"object": "enemyBullet3",
+												"layer": "\"arena\"",
+												"image-point": "\"rightWeapon\"",
+												"create-hierarchy": false
+											}
+										}
+									],
+									"sid": 814058396837954
+								}
+							]
 						}
 					],
 					"sid": 948060146208892
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Group3",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 761212098185730,
+									"parameters": {
+										"variable": "spawnGroup3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 462924284691270
+						}
+					],
+					"sid": 434005323358440
+				}
+			]
+		},
+		{
+			"functionName": "damageToPlayer",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "damage",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 400905760022978
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 391764730497855,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 842952075843491,
+							"parameters": {
+								"variable": "playerShields",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 165922176974105,
+							"parameters": {
+								"variable": "playerShields",
+								"value": "playerShields - damage"
+							}
+						}
+					],
+					"sid": 915515209949369,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 186608561117719,
+									"parameters": {
+										"variable": "playerShields",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 725206187400239,
+									"parameters": {
+										"variable": "playerHP",
+										"value": "playerHP + playerShields"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 365312190376425,
+									"parameters": {
+										"variable": "playerShields",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 757266385493403
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 315336086804397
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 368024937415127,
+							"parameters": {
+								"variable": "playerHP",
+								"value": "playerHP - damage"
+							}
+						}
+					],
+					"sid": 568292986524436
 				}
 			]
 		}

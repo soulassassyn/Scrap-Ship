@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "playerHPMax",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 307068096459143
+		},
+		{
+			"eventType": "variable",
 			"name": "playerShields",
 			"type": "number",
 			"initialValue": "0",
@@ -20,6 +30,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 745857278926228
+		},
+		{
+			"eventType": "variable",
+			"name": "playerShieldsMax",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 770440378203960
 		},
 		{
 			"eventType": "variable",
@@ -60,6 +80,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 963137068324104
+		},
+		{
+			"eventType": "variable",
+			"name": "playerShipDamage",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 801834333007826
 		},
 		{
 			"eventType": "variable",

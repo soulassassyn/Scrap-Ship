@@ -1,0 +1,65 @@
+{
+	"name": "playerHP",
+	"plugin-id": "Sprite",
+	"sid": 142340525654246,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 757752221888702
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4036336,
+						"collisionPoly": {
+							"points": [
+								0.03125,
+								0.125,
+								0.5,
+								0.125,
+								0.96875,
+								0.125,
+								0.96875,
+								0.5,
+								0.96875,
+								0.875,
+								0.5,
+								0.875,
+								0.03125,
+								0.875,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 978613213286137,
+				"name": "indicatorBarFill",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

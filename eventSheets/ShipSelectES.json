@@ -1249,9 +1249,27 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
+											"sid": 858745164702698,
+											"parameters": {
+												"variable": "playerHPMax",
+												"value": "hp"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
 											"sid": 364670663197351,
 											"parameters": {
 												"variable": "playerShields",
+												"value": "shields"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 667184246954079,
+											"parameters": {
+												"variable": "playerShieldsMax",
 												"value": "shields"
 											}
 										},
@@ -1980,7 +1998,7 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 448478281709954,
+											"sid": 962229142729733,
 											"parameters": {
 												"instance-variable": "bulletDamage",
 												"value": "90"
@@ -2024,10 +2042,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 489153118917947,
+											"sid": 148716237271755,
 											"parameters": {
 												"instance-variable": "bulletDamage",
-												"value": "10"
+												"value": "5"
 											}
 										}
 									],

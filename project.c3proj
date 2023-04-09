@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Orbit",
+			"name": "Orbit",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -183,7 +190,10 @@
 					"energyBullet",
 					"enemyRandomSpawn",
 					"enemyStaticSpawn",
-					"enemyEngineFX"
+					"enemyEngineFX",
+					"enemyBullet3",
+					"playerHP",
+					"playerShield"
 				],
 				"subfolders": [
 					{

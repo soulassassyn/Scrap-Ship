@@ -1436,6 +1436,68 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "playerHP",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 124,
+					"instanceVariables": {
+						"State": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 579.3531676301297,
+						"y": 694.0556531781835,
+						"width": 128,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "playerShield",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "indicatorBarFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 125,
+					"instanceVariables": {
+						"State": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 579.5140719461838,
+						"y": 675.095474164431,
+						"width": 64,
+						"height": 16,
+						"originX": 0.03125,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 308049660901849,
