@@ -720,6 +720,51 @@
 								"height-type": "no",
 								"z": false
 							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 879964120678077,
+							"parameters": {
+								"object-to-create": "engineAnimation",
+								"layer": "\"arena\"",
+								"x": "alignShip.X - 8",
+								"y": "alignShip.Y",
+								"create-hierarchy": false,
+								"template-name": "\"arena\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "engineAnimation",
+							"sid": 277624744423457,
+							"parameters": {
+								"animation": "str(playerEngineFrame)",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "engineAnimation",
+							"sid": 928491607805548,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "playerShip",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "engineAnimation",
+							"sid": 206757010919549,
+							"parameters": {
+								"opacity": "0"
+							}
 						}
 					],
 					"sid": 798062165310652

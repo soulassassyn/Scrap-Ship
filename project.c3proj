@@ -132,12 +132,7 @@
 			"gridTitle",
 			"launchButtonText",
 			"tabTitle",
-			"coreStatText",
-			"bullet",
-			"bulletInit",
-			"missileExhaust",
-			"missileParticles",
-			"engineAnimation"
+			"coreStatText"
 		],
 		"subfolders": [
 			{
@@ -161,7 +156,11 @@
 					"tab",
 					"alignShip",
 					"indicatorBar",
-					"indicatorBarFill"
+					"indicatorBarFill",
+					"missileExhaust",
+					"bullet",
+					"bulletInit",
+					"engineAnimation"
 				],
 				"subfolders": [
 					{
@@ -177,6 +176,13 @@
 					}
 				],
 				"name": "Sprites"
+			},
+			{
+				"items": [
+					"missileParticles"
+				],
+				"subfolders": [],
+				"name": "Particles"
 			}
 		]
 	},
