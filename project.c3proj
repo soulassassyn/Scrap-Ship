@@ -160,7 +160,12 @@
 					"missileExhaust",
 					"bullet",
 					"bulletInit",
-					"engineAnimation"
+					"engineAnimation",
+					"plasma",
+					"plasmaBullet",
+					"energyCharge",
+					"energyBlast",
+					"energyBullet"
 				],
 				"subfolders": [
 					{

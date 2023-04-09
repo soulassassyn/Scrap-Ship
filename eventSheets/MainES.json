@@ -181,16 +181,34 @@
 					],
 					"actions": [
 						{
-							"id": "set-cursor-from-sprite",
-							"objectClass": "Mouse",
-							"sid": 237354355367444,
+							"callFunction": "initiatalizeArena",
+							"sid": 152109181851962
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 339690190474097,
 							"parameters": {
-								"sprite": "targetReticle3"
+								"group-name": "\"weaponControls\"",
+								"state": "deactivated"
 							}
 						},
 						{
-							"callFunction": "initiatalizeArena",
-							"sid": 152109181851962
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 893980994512038,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 480911019176245,
+							"parameters": {
+								"group-name": "\"weaponControls\"",
+								"state": "activated"
+							}
 						}
 					],
 					"sid": 123605076466803
@@ -391,6 +409,27 @@
 											"eventType": "block",
 											"conditions": [
 												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 297140282286475
+												}
+											],
+											"actions": [
+												{
+													"id": "set-cursor-from-sprite",
+													"objectClass": "Mouse",
+													"sid": 132803389190452,
+													"parameters": {
+														"sprite": "targetReticle1"
+													}
+												}
+											],
+											"sid": 531556413860123
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
 													"id": "mouse-button-is-down",
 													"objectClass": "Mouse",
 													"sid": 713837796227442,
@@ -440,6 +479,24 @@
 															"id": "move-to-top",
 															"objectClass": "bulletInit",
 															"sid": 592766995130249
+														},
+														{
+															"id": "accelerate",
+															"objectClass": "playerShip",
+															"sid": 938352571890985,
+															"behaviorType": "Custom",
+															"parameters": {
+																"which": "forwards",
+																"acceleration": "-2000"
+															}
+														},
+														{
+															"id": "move-forward",
+															"objectClass": "playerShip",
+															"sid": 635281715943587,
+															"parameters": {
+																"distance": "-2"
+															}
 														},
 														{
 															"id": "set-boolean-eventvar",
@@ -497,6 +554,15 @@
 													}
 												},
 												{
+													"id": "set-speed",
+													"objectClass": "bullet",
+													"sid": 510368085198618,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "playerBulletSpeed * 10"
+													}
+												},
+												{
 													"id": "spawn-another-object",
 													"objectClass": "bullet",
 													"sid": 432917021795661,
@@ -531,8 +597,521 @@
 											"sid": 974896159061034
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 943566794559179,
+											"parameters": {
+												"first-value": "playerWeaponFrame",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 842891257266930,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 407052075157919
+												}
+											],
+											"actions": [
+												{
+													"id": "set-cursor-from-sprite",
+													"objectClass": "Mouse",
+													"sid": 233511759843393,
+													"parameters": {
+														"sprite": "targetReticle3"
+													}
+												}
+											],
+											"sid": 927540093744504
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "mouse-button-is-down",
+													"objectClass": "Mouse",
+													"sid": 522245447541342,
+													"parameters": {
+														"mouse-button": "left"
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 216776278259671,
+													"parameters": {
+														"variable": "fireActive"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 167439900904120,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 740776865691780,
+															"parameters": {
+																"object": "plasma",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"leftWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "plasma",
+															"sid": 987421854045703,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "playerShip",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 939997495963835,
+															"parameters": {
+																"object": "plasma",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"rightWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "plasma",
+															"sid": 948195002516279,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "playerShip",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 123456754019238,
+															"parameters": {
+																"object": "plasmaBullet",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"leftWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "set-speed",
+															"objectClass": "bullet",
+															"sid": 677811316230876,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"speed": "playerBulletSpeed * 10"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 481071681567281,
+															"parameters": {
+																"object": "plasmaBullet",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"rightWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "set-speed",
+															"objectClass": "bullet",
+															"sid": 808818759762134,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"speed": "playerBulletSpeed * 10"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 430204726334667,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "false"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 173484102965022,
+															"parameters": {
+																"seconds": "(100 - playerFireRate) / 100"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 148211277730380,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 449366876864018
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-animation-finished",
+															"objectClass": "plasma",
+															"sid": 924218296448114,
+															"parameters": {
+																"animation": "\"plasma\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "destroy",
+															"objectClass": "plasma",
+															"sid": 163744484397498
+														}
+													],
+													"sid": 740910589622703
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 806762172353699,
+											"parameters": {
+												"first-value": "playerWeaponFrame",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 641082532801640,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 642287715814847
+												}
+											],
+											"actions": [
+												{
+													"id": "set-cursor-from-sprite",
+													"objectClass": "Mouse",
+													"sid": 892200052971152,
+													"parameters": {
+														"sprite": "targetReticle4"
+													}
+												}
+											],
+											"sid": 645008349276851
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "mouse-button-is-down",
+													"objectClass": "Mouse",
+													"sid": 561744326435432,
+													"parameters": {
+														"mouse-button": "left"
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 674739363239948,
+													"parameters": {
+														"variable": "fireActive"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 930449747705756,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 604859434674733,
+															"parameters": {
+																"object": "energyCharge",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"leftWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "energyCharge",
+															"sid": 447055448170324,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "playerShip",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "playerShip",
+															"sid": 115600499262672,
+															"parameters": {
+																"object": "energyCharge",
+																"layer": "playerShip.LayerName",
+																"image-point": "\"rightWeapon\"",
+																"create-hierarchy": false
+															}
+														},
+														{
+															"id": "pin-to-object-properties",
+															"objectClass": "energyCharge",
+															"sid": 440768387881881,
+															"behaviorType": "Pin",
+															"parameters": {
+																"pin-to": "playerShip",
+																"x": true,
+																"y": true,
+																"angle": true,
+																"width-type": "no",
+																"height-type": "no",
+																"z": false
+															}
+														}
+													],
+													"sid": 687555907845069
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 485361810910323,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "false"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 659089738848743,
+															"parameters": {
+																"seconds": "(100 - playerFireRate) / 100"
+															}
+														},
+														{
+															"id": "set-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 853192244012480,
+															"parameters": {
+																"variable": "fireActive",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 593905068811130
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "energyCharge",
+													"sid": 817565517995987,
+													"parameters": {
+														"animation": "\"energyCharge\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "move-forward",
+													"objectClass": "playerShip",
+													"sid": 756742403637990,
+													"parameters": {
+														"distance": "-6"
+													}
+												},
+												{
+													"id": "accelerate",
+													"objectClass": "playerShip",
+													"sid": 714613851285309,
+													"behaviorType": "Custom",
+													"parameters": {
+														"which": "forwards",
+														"acceleration": "-2000"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "energyCharge",
+													"sid": 680734501110186,
+													"parameters": {
+														"object": "energyBlast",
+														"layer": "energyCharge.LayerName",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "energyCharge",
+													"sid": 539401451280307,
+													"parameters": {
+														"object": "energyBullet",
+														"layer": "energyCharge.LayerName",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "energyBullet",
+													"sid": 813906931979736,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "playerBulletSpeed * 10"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "energyCharge",
+													"sid": 568663149391100
+												}
+											],
+											"sid": 507526671456431
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "energyBlast",
+													"sid": 212400897096958,
+													"parameters": {
+														"animation": "\"energyBlast\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "energyBlast",
+													"sid": 750067944928057
+												}
+											],
+											"sid": 154091967269807
+										}
+									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "energyBullet",
+									"sid": 316311676257463
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "energyBullet",
+									"sid": 373470886304198
+								}
+							],
+							"sid": 221382797756105
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "bullet",
+									"sid": 364404039239996
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "bullet",
+									"sid": 234291482124922
+								}
+							],
+							"sid": 415251405661567
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "plasmaBullet",
+									"sid": 242701040523560
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "plasmaBullet",
+									"sid": 553136439636206
+								}
+							],
+							"sid": 153914171219694
 						}
 					],
 					"sid": 947890535138743

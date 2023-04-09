@@ -1,0 +1,43 @@
+{
+	"name": "plasmaBullet",
+	"plugin-id": "Sprite",
+	"sid": 551421262196164,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 590562361432143
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 10,
+						"height": 3,
+						"originX": 0.5,
+						"originY": 0.6666666666666666,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 683902,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 275836773146115,
+				"name": "plasmaBullet",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

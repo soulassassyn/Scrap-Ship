@@ -1,0 +1,79 @@
+{
+	"name": "energyBullet",
+	"plugin-id": "Sprite",
+	"sid": 919458284801746,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 222514008609047
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 20,
+						"height": 6,
+						"originX": 0.7,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7423597,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 22,
+						"height": 8,
+						"originX": 0.7727272727272727,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 356958,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 20,
+						"height": 8,
+						"originX": 0.75,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5773692,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 17,
+						"height": 8,
+						"originX": 0.7058823529411765,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3748227,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 919309188605480,
+				"name": "energyBullet",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 24
+			}
+		],
+		"subfolders": []
+	}
+}

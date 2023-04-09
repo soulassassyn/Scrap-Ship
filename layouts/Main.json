@@ -229,8 +229,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 320,
-						"y": 180,
+						"x": 640,
+						"y": 360,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,

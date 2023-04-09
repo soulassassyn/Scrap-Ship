@@ -2006,10 +2006,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 343577311062584,
+											"sid": 853345023396491,
 											"parameters": {
 												"instance-variable": "fireRate",
-												"value": "100"
+												"value": "90"
 											}
 										},
 										{
@@ -2050,19 +2050,19 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 325571195508266,
+											"sid": 230921785655455,
 											"parameters": {
 												"instance-variable": "fireRate",
-												"value": "50"
+												"value": "30"
 											}
 										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 369268386971534,
+											"sid": 679064751666405,
 											"parameters": {
 												"instance-variable": "bulletSpeed",
-												"value": "60"
+												"value": "80"
 											}
 										},
 										{
