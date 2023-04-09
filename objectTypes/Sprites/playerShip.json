@@ -41,6 +41,16 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 672227370838139
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 885911622360535
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 744188649434473
 		}
 	],
 	"effectTypes": [],

@@ -213,9 +213,46 @@
 								"group-name": "\"weaponControls\"",
 								"state": "activated"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerScore",
+							"sid": 576021959024269,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "playerScore",
+							"sid": 338153886021901,
+							"parameters": {
+								"text": "playerScore"
+							}
 						}
 					],
 					"sid": 123605076466803
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 755102515079986
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "playerScore",
+							"sid": 964686234227785,
+							"parameters": {
+								"text": "playerScore"
+							}
+						}
+					],
+					"sid": 455589342193363
 				},
 				{
 					"eventType": "block",
@@ -243,10 +280,10 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 197553842854339,
+							"sid": 211097360840410,
 							"parameters": {
 								"variable": "playerShields",
-								"value": "playerGenerator / 100"
+								"value": "playerGenerator / 10"
 							}
 						}
 					],
@@ -278,10 +315,10 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 606824359757993,
+							"sid": 988759623800603,
 							"parameters": {
 								"variable": "playerHP",
-								"value": "playerGenerator / 100"
+								"value": "playerGenerator / 10"
 							}
 						}
 					],
@@ -527,7 +564,8 @@
 											}
 										}
 									],
-									"sid": 932403331290004
+									"sid": 932403331290004,
+									"disabled": true
 								}
 							]
 						},
@@ -1374,7 +1412,43 @@
 											"sid": 197045042410401
 										}
 									],
-									"sid": 870931133159862
+									"sid": 870931133159862,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "enemyShip",
+													"sid": 209397743119115,
+													"parameters": {
+														"instance-variable": "hp",
+														"comparison": 3,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 533195803248384,
+													"parameters": {
+														"variable": "playerScore",
+														"value": "enemyShip.score"
+													}
+												},
+												{
+													"callFunction": "floatingScore",
+													"sid": 986620997348539,
+													"parameters": [
+														"enemyShip.UID"
+													]
+												}
+											],
+											"sid": 211064614434997
+										}
+									]
 								}
 							],
 							"isOrBlock": true
@@ -1613,6 +1687,124 @@
 						}
 					],
 					"sid": 798062165310652
+				}
+			]
+		},
+		{
+			"functionName": "floatingScore",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "UID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 956794053479075
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 521516157894088,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 815123546447356,
+							"parameters": {
+								"object": "enemyShip",
+								"expression": "enemyShip.UID",
+								"comparison": 0,
+								"value": "UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 692196994979506,
+							"parameters": {
+								"object-to-create": "floatingScore",
+								"layer": "\"arena\"",
+								"x": "enemyShip.X",
+								"y": "enemyShip.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "floatingScore",
+							"sid": 726359123384008,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "enemyShip.Y + 50",
+								"time": "2",
+								"ease": "default",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "floatingScore",
+							"sid": 860304882204790,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "2",
+								"ease": "default",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "floatingScore",
+							"sid": 214960280824620,
+							"parameters": {
+								"text": "\"+\" & enemyShip.score"
+							}
+						}
+					],
+					"sid": 833883716771959
+				}
+			]
+		},
+		{
+			"functionName": "missileLaunch",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 772052963064700,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 245222475894772
 				}
 			]
 		}

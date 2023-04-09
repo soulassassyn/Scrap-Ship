@@ -1498,6 +1498,177 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "enemyCornerSpawn",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "enemyCornerSpawn",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 126,
+					"instanceVariables": {
+						"State": "topLeft",
+						"staticPick": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 204,
+						"y": 148,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyCornerSpawn",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "enemyCornerSpawn",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 127,
+					"instanceVariables": {
+						"State": "botRight",
+						"staticPick": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1076,
+						"y": 572,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyCornerSpawn",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "enemyCornerSpawn",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 128,
+					"instanceVariables": {
+						"State": "topRight",
+						"staticPick": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1076,
+						"y": 148,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemyCornerSpawn",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "enemyCornerSpawn",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 129,
+					"instanceVariables": {
+						"State": "botLeft",
+						"staticPick": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 204,
+						"y": 572,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "playerScore",
+					"properties": {
+						"text": "1000",
+						"enable-bbcode": true,
+						"font": "advanced_pixel_lcd-7",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 130,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 640,
+						"y": 41,
+						"width": 226.63636363636317,
+						"height": 46.528925619835036,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 308049660901849,

@@ -1,0 +1,20 @@
+{
+	"name": "floatingScore",
+	"plugin-id": "Text",
+	"sid": 441394145105501,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 618358936860797
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 126532628599802
+		}
+	],
+	"effectTypes": []
+}

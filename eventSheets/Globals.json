@@ -160,6 +160,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 122622201517917
+		},
+		{
+			"eventType": "variable",
+			"name": "difficulty",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 913132911591439
+		},
+		{
+			"eventType": "variable",
+			"name": "playerScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 998945036652961
 		}
 	],
 	"sid": 380652354289867

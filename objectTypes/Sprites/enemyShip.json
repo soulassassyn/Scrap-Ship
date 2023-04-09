@@ -31,6 +31,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 823573094034484
+		},
+		{
+			"name": "score",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 199225186078717
 		}
 	],
 	"behaviorTypes": [
@@ -48,6 +55,26 @@
 			"behaviorId": "Orbit",
 			"name": "Orbit",
 			"sid": 795651894411063
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 844607094767995
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 398117826510121
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 414681435904831
+		},
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 661992087605316
 		}
 	],
 	"effectTypes": [],

@@ -2042,10 +2042,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 148716237271755,
+											"sid": 159231406350619,
 											"parameters": {
 												"instance-variable": "bulletDamage",
-												"value": "5"
+												"value": "10"
 											}
 										}
 									],
