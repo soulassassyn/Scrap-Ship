@@ -1694,6 +1694,39 @@
 			"global": false
 		},
 		{
+			"name": "tutorial",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 372782098404592,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "pauseMenu",
 			"overriden": 0,
 			"subLayers": [],
@@ -1714,7 +1747,7 @@
 						"x": 640,
 						"y": 370,
 						"width": 250,
-						"height": 250,
+						"height": 204,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1725,6 +1758,96 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "pauseText",
+					"properties": {
+						"text": "PLAY",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 18,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 152,
+					"instanceVariables": {
+						"State": ""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 640.1495497392139,
+						"y": 433.69891357421875,
+						"width": 158.41626883655897,
+						"height": 33.021525289637964,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "pauseText",
+					"properties": {
+						"text": "PAUSED",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 18,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 153,
+					"instanceVariables": {
+						"State": "pauseText"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 639.6118571089996,
+						"y": 355.9703301802271,
+						"width": 158.41626883655897,
+						"height": 33.021525289637964,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
 					}
 				}
 			],

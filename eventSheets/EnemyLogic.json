@@ -1105,6 +1105,18 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 436593389397269,
+									"parameters": {
+										"audio-file": "enemy_shoot",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "enemyShip",
 									"sid": 638293540658134,
@@ -1520,6 +1532,18 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 689937063991849,
+											"parameters": {
+												"audio-file": "enemy_shoot",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
 										{
 											"id": "spawn-another-object",
 											"objectClass": "enemyShip",

@@ -1,7 +1,7 @@
 {
-	"name": "panelRedButton",
+	"name": "panelScore",
 	"plugin-id": "Sprite",
-	"sid": 801152937234621,
+	"sid": 133822193067040,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,32 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 30,
-						"height": 30,
+						"width": 116,
+						"height": 54,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 926648,
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 30,
-						"height": 30,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 6616362,
+						"imageSpriteId": 3312118,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 543910104990220,
-				"name": "redButton",
+				"sid": 568505742590933,
+				"name": "panelScore",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

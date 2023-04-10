@@ -1,17 +1,9 @@
 {
-	"name": "playerShield",
+	"name": "panelBottom",
 	"plugin-id": "Sprite",
-	"sid": 497346981796141,
+	"sid": 351702923929099,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "State",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 731102226248591
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -19,31 +11,31 @@
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 16,
-						"originX": 0.03125,
+						"width": 1026,
+						"height": 34,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8785221,
+						"imageSpriteId": 2638973,
 						"collisionPoly": {
 							"points": [
-								0.03125,
-								0.125,
+								0.0029239766081871343,
+								0.08823529411764706,
 								0.5,
-								0.125,
-								0.96875,
-								0.125,
-								0.96875,
+								0.029411764705882353,
+								0.9970760233918129,
+								0.08823529411764706,
+								0.9990253411306043,
 								0.5,
-								0.96875,
-								0.875,
+								0.9990253411306043,
+								0.9705882352941176,
 								0.5,
-								0.875,
-								0.03125,
-								0.875,
-								0.03125,
+								0.9705882352941176,
+								0.0009746588693957114,
+								0.9705882352941176,
+								0.0009746588693957114,
 								0.5
 							]
 						},
@@ -51,8 +43,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 707727642507008,
-				"name": "indicatorBarFill",
+				"sid": 588492805066254,
+				"name": "panelBottom",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -1,0 +1,17 @@
+{
+	"name": "pauseText",
+	"plugin-id": "Text",
+	"sid": 306839975631176,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 972372727830425
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

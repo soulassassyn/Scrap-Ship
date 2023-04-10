@@ -1,7 +1,7 @@
 {
-	"name": "playerHP",
+	"name": "playerShield",
 	"plugin-id": "Sprite",
-	"sid": 142340525654246,
+	"sid": 497346981796141,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,7 +9,7 @@
 			"type": "string",
 			"desc": "",
 			"show": true,
-			"sid": 757752221888702
+			"sid": 731102226248591
 		}
 	],
 	"behaviorTypes": [],
@@ -19,14 +19,14 @@
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 16,
-						"originX": 0.03125,
+						"width": 248,
+						"height": 28,
+						"originX": 0,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4036336,
+						"imageSpriteId": 6054442,
 						"collisionPoly": {
 							"points": [
 								0.03125,
@@ -51,8 +51,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 978613213286137,
-				"name": "indicatorBarFill",
+				"sid": 707727642507008,
+				"name": "playerShield",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

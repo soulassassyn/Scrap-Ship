@@ -45,6 +45,13 @@
 							]
 						},
 						{
+							"callFunction": "layerOff",
+							"sid": 710243851707929,
+							"parameters": [
+								"\"tutorial\""
+							]
+						},
+						{
 							"callFunction": "layerOn",
 							"sid": 345813122049474,
 							"parameters": [
@@ -103,7 +110,36 @@
 					"sid": 992539695999403
 				}
 			],
-			"sid": 272134033549342
+			"sid": 272134033549342,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 277549407746241,
+							"parameters": {
+								"object": "pauseText",
+								"expression": "pauseText.State",
+								"comparison": 0,
+								"value": "\"pauseText\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "pauseText",
+							"sid": 185241348078514,
+							"parameters": {
+								"text": "\"PAUSED\""
+							}
+						}
+					],
+					"sid": 460562877289029
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -116,6 +152,16 @@
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "pauseMenu"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 204791505290669,
+					"parameters": {
+						"variable": "playerHP",
+						"comparison": 3,
+						"value": "0"
 					}
 				}
 			],
@@ -133,6 +179,15 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 990613405833475
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 429398483599029,
+					"parameters": {
+						"variable": "tutorialMode",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 572748917240149
@@ -285,7 +340,88 @@
 							}
 						}
 					],
-					"sid": 123605076466803
+					"sid": 123605076466803,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 194741443475299,
+									"parameters": {
+										"variable": "tutorialMode"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "pauseGame",
+									"sid": 487921120198431
+								},
+								{
+									"callFunction": "layerOff",
+									"sid": 384547694737677,
+									"parameters": [
+										"\"pauseMenu\""
+									]
+								},
+								{
+									"callFunction": "layerOn",
+									"sid": 524301073766939,
+									"parameters": [
+										"\"tutorial\""
+									]
+								}
+							],
+							"sid": 163165025422750
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 915772869264484,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 761595516405888,
+							"parameters": {
+								"variable": "tutorialMode"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "pauseGame",
+							"sid": 915352364554751
+						},
+						{
+							"callFunction": "layerOff",
+							"sid": 311325157991742,
+							"parameters": [
+								"\"tutorial\""
+							]
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 107087608824047,
+							"parameters": {
+								"variable": "tutorialMode",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 120489172969225
 				},
 				{
 					"eventType": "block",
@@ -332,9 +468,17 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 869218642623748,
+							"sid": 461967384649134,
 							"parameters": {
-								"interval-seconds": "regenTick"
+								"interval-seconds": "regenTick / 2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 815245662908288,
+							"parameters": {
+								"variable": "regenActive"
 							}
 						}
 					],
@@ -371,6 +515,14 @@
 							"parameters": {
 								"interval-seconds": "regenTick"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 783999527448055,
+							"parameters": {
+								"variable": "regenActive"
+							}
 						}
 					],
 					"actions": [
@@ -402,15 +554,47 @@
 					"sid": 526037319791785,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "hpMultiplier",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 826502759671212
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 961455400838509
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 908976196504384,
+									"parameters": {
+										"variable": "hpMultiplier",
+										"value": "248 / playerHPMax"
+									}
+								}
+							],
+							"sid": 120189645977652
+						},
+						{
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
 								{
 									"id": "set-width",
 									"objectClass": "playerHP",
-									"sid": 282281781567646,
+									"sid": 289384235139001,
 									"parameters": {
-										"width": "clamp((playerHP * 2), 0, (playerHP * 2))"
+										"width": "clamp((playerHP * hpMultiplier), 0, (playerHP * hpMultiplier))"
 									}
 								}
 							],
@@ -434,15 +618,47 @@
 					"sid": 324794976943887,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "shieldMultiplier",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 637738314168380
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 901243397916556
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 937121495727363,
+									"parameters": {
+										"variable": "shieldMultiplier",
+										"value": "248 / playerShieldsMax"
+									}
+								}
+							],
+							"sid": 853076901456492
+						},
+						{
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
 								{
 									"id": "set-width",
 									"objectClass": "playerShield",
-									"sid": 229321412321314,
+									"sid": 684102158610746,
 									"parameters": {
-										"width": "clamp((playerShields * 2), 0, (playerShields * 2))"
+										"width": "clamp((playerShields * shieldMultiplier), 0, (playerShields * shieldMultiplier))"
 									}
 								}
 							],
@@ -480,7 +696,36 @@
 							"sid": 260890111506736
 						}
 					],
-					"sid": 851658421744865
+					"sid": 851658421744865,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 573715945115931,
+									"parameters": {
+										"object": "pauseText",
+										"expression": "pauseText.State",
+										"comparison": 0,
+										"value": "\"pauseText\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "pauseText",
+									"sid": 808056270222801,
+									"parameters": {
+										"text": "\"GAME OVER\""
+									}
+								}
+							],
+							"sid": 898025564077285
+						}
+					]
 				},
 				{
 					"eventType": "group",
@@ -748,6 +993,18 @@
 															]
 														},
 														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 772383726233092,
+															"parameters": {
+																"audio-file": "missile_shoot",
+																"loop": "not-looping",
+																"volume": "0",
+																"stereo-pan": "0",
+																"tag-optional": "\"\""
+															}
+														},
+														{
 															"id": "accelerate",
 															"objectClass": "playerShip",
 															"sid": 938352571890985,
@@ -947,6 +1204,18 @@
 													"eventType": "block",
 													"conditions": [],
 													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 926894739410886,
+															"parameters": {
+																"audio-file": "plasma_shoot",
+																"loop": "not-looping",
+																"volume": "0",
+																"stereo-pan": "0",
+																"tag-optional": "\"\""
+															}
+														},
 														{
 															"id": "spawn-another-object",
 															"objectClass": "playerShip",
@@ -1175,6 +1444,18 @@
 													"eventType": "block",
 													"conditions": [],
 													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 527710915975189,
+															"parameters": {
+																"audio-file": "railgun_shoot2",
+																"loop": "not-looping",
+																"volume": "0",
+																"stereo-pan": "0",
+																"tag-optional": "\"\""
+															}
+														},
 														{
 															"id": "spawn-another-object",
 															"objectClass": "playerShip",
@@ -1476,7 +1757,8 @@
 										{
 											"id": "destroy",
 											"objectClass": "energyBullet",
-											"sid": 957975953048225
+											"sid": 957975953048225,
+											"disabled": true
 										},
 										{
 											"id": "destroy",
@@ -1524,6 +1806,24 @@
 								}
 							],
 							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "energyBullet",
+									"sid": 231711100644949
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "energyBullet",
+									"sid": 791596694951603
+								}
+							],
+							"sid": 872011002763348
 						}
 					],
 					"sid": 193767042245664

@@ -76,7 +76,7 @@
 					"type": "playerHP",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "indicatorBarFill",
+						"initial-animation": "playerHP",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -86,12 +86,40 @@
 						"State": ""
 					},
 					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 124,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 599,
+						"x": 516,
 						"y": 694,
-						"width": 128,
-						"height": 16,
-						"originX": 0.03125,
+						"width": 248,
+						"height": 28,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -100,14 +128,14 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 1
 					}
 				},
 				{
 					"type": "playerShield",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "indicatorBarFill",
+						"initial-animation": "playerShield",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -117,141 +145,40 @@
 						"State": ""
 					},
 					"behaviors": {},
-					"world": {
-						"x": 600,
-						"y": 675,
-						"width": 64,
-						"height": 16,
-						"originX": 0.03125,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "playerScore",
-					"properties": {
-						"text": "1000",
-						"enable-bbcode": true,
-						"font": "advanced_pixel_lcd-7",
-						"size": 16,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9372549019607843,
-							0.6784313725490196,
-							0.41568627450980394,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "bottom",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 125,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
 					},
-					"uid": 130,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 660,
-						"y": 41,
-						"width": 226.63636363636317,
-						"height": 46.528925619835036,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "waveCountTitleText",
-					"properties": {
-						"text": "Wave",
-						"enable-bbcode": true,
-						"font": "Retro Gaming",
-						"size": 16,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9372549019607843,
-							0.6784313725490196,
-							0.41568627450980394,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 133,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 519,
-						"y": 23,
-						"width": 100.00000000000006,
-						"height": 38.26446280991735,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "waveCountText",
-					"properties": {
-						"text": "1000",
-						"enable-bbcode": true,
-						"font": "advanced_pixel_lcd-7",
-						"size": 16,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9372549019607843,
-							0.6784313725490196,
-							0.41568627450980394,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "bottom",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 134,
-					"instanceVariables": {},
-					"behaviors": {},
 					"world": {
 						"x": 516,
-						"y": 57,
-						"width": 109.09090909090907,
-						"height": 49.83471074380162,
-						"originX": 0.5,
+						"y": 656,
+						"width": 248,
+						"height": 28,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,
@@ -260,7 +187,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 1
 					}
 				},
 				{
@@ -304,8 +231,8 @@
 						}
 					},
 					"world": {
-						"x": 880,
-						"y": 647,
+						"x": 902.0872904024909,
+						"y": 651.3588454168129,
 						"width": 246,
 						"height": 116,
 						"originX": 0.5,
@@ -317,7 +244,292 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "panelShield",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "panelFill",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 143,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 148,
+						"uid": 143,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 379.0474454740048,
+						"y": 651.7762817796529,
+						"width": 246,
+						"height": 116,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
+					"type": "panelShields",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "panelShields",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 145,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 145,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": 656,
+						"width": 258,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "panelScore",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "panelScore",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 146,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 146,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 567,
+						"y": 62,
+						"width": 116,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "panelScore",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "panelScore",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 147,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 147,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 704,
+						"y": 62,
+						"width": 116,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
+					}
+				},
+				{
+					"type": "panelShields",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "panelShields",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 144,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 144,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": 694,
+						"width": 258,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 2
 					}
 				},
 				{
@@ -393,8 +605,8 @@
 						}
 					},
 					"world": {
-						"x": 880,
-						"y": 647,
+						"x": 902.0872904024909,
+						"y": 651.358845,
 						"width": 250,
 						"height": 120,
 						"originX": 0.5,
@@ -406,24 +618,56 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 2
+						"zElevation": 3
 					}
 				},
 				{
-					"type": "panelRedButton",
+					"type": "panelShield",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "redButton",
+						"initial-animation": "panelBevel",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 139,
+					"uid": 148,
 					"instanceVariables": {},
 					"behaviors": {},
 					"sceneGraphData": {
-						"parent-uid": 136,
-						"uid": 139,
+						"parent-uid": null,
+						"uid": 148,
+						"children": [
+							{
+								"uid": 143,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 150,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
 						"flags": {
 							"x": true,
 							"y": true,
@@ -450,10 +694,10 @@
 						}
 					},
 					"world": {
-						"x": 970,
-						"y": 622,
-						"width": 30,
-						"height": 30,
+						"x": 379.0474454740048,
+						"y": 651.77628136284,
+						"width": 250,
+						"height": 120,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -467,6 +711,163 @@
 					}
 				},
 				{
+					"type": "waveCountTitleText",
+					"properties": {
+						"text": "Wave",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 133,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 565,
+						"y": 23,
+						"width": 100.00000000000006,
+						"height": 38.26446280991735,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "waveCountText",
+					"properties": {
+						"text": "1000",
+						"enable-bbcode": true,
+						"font": "advanced_pixel_lcd-7",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "right",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 134,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 565,
+						"y": 61,
+						"width": 106.839394,
+						"height": 43.023987,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "playerScore",
+					"properties": {
+						"text": "1000",
+						"enable-bbcode": true,
+						"font": "advanced_pixel_lcd-7",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "right",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 130,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 130,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 702,
+						"y": 61,
+						"width": 106.83939379351,
+						"height": 43.023986625021166,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
 					"type": "shieldBattery",
 					"properties": {
 						"initially-visible": true,
@@ -476,7 +877,9 @@
 						"live-preview": false
 					},
 					"uid": 135,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": "shields"
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -513,8 +916,8 @@
 						}
 					},
 					"world": {
-						"x": 883,
-						"y": 622,
+						"x": 905.0872904024909,
+						"y": 626.3588454168129,
 						"width": 108,
 						"height": 34,
 						"originX": 0.5,
@@ -526,13 +929,72 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 3
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "panelRedButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "redButton",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 139,
+					"instanceVariables": {
+						"State": "shields"
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 136,
+						"uid": 139,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 992.0872904024909,
+						"y": 626.3588454168129,
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
 					}
 				},
 				{
 					"type": "shieldPanelText",
 					"properties": {
-						"text": "battery bay",
+						"text": "REGEN",
 						"enable-bbcode": true,
 						"font": "advanced_pixel_lcd-7",
 						"size": 8,
@@ -556,8 +1018,218 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 908,
-						"y": 671,
+						"x": 930.0872904024909,
+						"y": 675.3588454168129,
+						"width": 149.10828579530198,
+						"height": 25.334926197902746,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "waveCountTitleText",
+					"properties": {
+						"text": "Score",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 142,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 703,
+						"y": 23,
+						"width": 100.00000000000006,
+						"height": 38.26446280991735,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "shieldBattery",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "shieldBattery",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 149,
+					"instanceVariables": {
+						"State": "weapons"
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 382.0474454740048,
+						"y": 626.7762817796529,
+						"width": 108,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "panelRedButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "redButton",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 150,
+					"instanceVariables": {
+						"State": "weapons"
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 148,
+						"uid": 150,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 469.0474454740048,
+						"y": 626.7762817796529,
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 4
+					}
+				},
+				{
+					"type": "shieldPanelText",
+					"properties": {
+						"text": "WEAPONS",
+						"enable-bbcode": true,
+						"font": "advanced_pixel_lcd-7",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 151,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 407.0474454740048,
+						"y": 675.7762817796529,
 						"width": 149.10828579530198,
 						"height": 25.334926197902746,
 						"originX": 0.5,
@@ -574,6 +1246,140 @@
 				}
 			],
 			"sid": 521673685022907,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": true
+		},
+		{
+			"name": "tutorial",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "centralPanel",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "centralPanel",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 155,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 155,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": 345,
+						"width": 510,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tutorialText",
+					"properties": {
+						"text": "Try to last as many Waves as you can and get a high Score.\n\nWatch out for your WEAPONS and SHIP REGEN disconnecting. If they do, just click those RED BUTTONS to RECONNECT them!!!\n\nClick to START!                      Good luck!",
+						"enable-bbcode": true,
+						"font": "Retro Gaming",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.9372549019607843,
+							0.6784313725490196,
+							0.41568627450980394,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 154,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 419.0407548384232,
+						"y": 265.22788862748575,
+						"width": 442.7272727272728,
+						"height": 165.4545454545455,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				}
+			],
+			"sid": 914324180906591,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

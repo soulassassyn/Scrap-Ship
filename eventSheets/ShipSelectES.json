@@ -433,6 +433,18 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 655346205725491,
+									"parameters": {
+										"audio-file": "menu_select",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"type": "script",
 									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridShip\");"
 								},
@@ -499,6 +511,18 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 605071241347297,
+									"parameters": {
+										"audio-file": "menu_select",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"type": "script",
 									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridWeapon\");"
 								},
@@ -564,6 +588,18 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 962644147242161,
+									"parameters": {
+										"audio-file": "menu_select",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
 								{
 									"type": "script",
 									"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridEngine\");"
@@ -734,6 +770,18 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 481324439009313,
+					"parameters": {
+						"audio-file": "menu_select",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"callFunction": "updateInstanceVars",
 					"sid": 276236564586351,
 					"parameters": [
@@ -820,6 +868,18 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 486526175892199,
+					"parameters": {
+						"audio-file": "menu_select",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"callFunction": "updateInstanceVars",
 					"sid": 812899962034920,
 					"parameters": [
@@ -905,6 +965,18 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 294257218569581,
+					"parameters": {
+						"audio-file": "menu_select",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"callFunction": "updateInstanceVars",
 					"sid": 430509552548755,
@@ -1961,10 +2033,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridShip",
-											"sid": 263210181960554,
+											"sid": 373433148805708,
 											"parameters": {
 												"instance-variable": "generator",
-												"value": "20"
+												"value": "35"
 											}
 										}
 									],

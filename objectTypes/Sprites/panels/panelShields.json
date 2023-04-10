@@ -1,7 +1,7 @@
 {
-	"name": "pauseMenu",
+	"name": "panelShields",
 	"plugin-id": "Sprite",
-	"sid": 513172617853658,
+	"sid": 297375419011644,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,40 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 204,
+						"width": 258,
+						"height": 34,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9647918,
+						"imageSpriteId": 725753,
 						"collisionPoly": {
 							"points": [
-								0.074016,
-								0,
-								0.5,
-								0,
-								0.925984,
-								0,
-								1,
-								0.5331603229527104,
-								0.901408,
-								1,
-								0.5,
-								1,
-								0.098592,
-								1,
-								0,
-								0.5331603229527104
+								0.011627906976744186,
+								0.20588235294117646,
+								0.45348837209302323,
+								0.029411764705882353,
+								0.9186046511627907,
+								0.029411764705882353,
+								0.45348837209302323,
+								0.9705882352941176
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 989733786479252,
-				"name": "pauseMenu",
+				"sid": 919811211210146,
+				"name": "panelShields",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

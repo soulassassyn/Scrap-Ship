@@ -195,7 +195,9 @@
 			"waveCountTitleText",
 			"waveCountText",
 			"shieldPanelText",
-			"pauseMenu"
+			"pauseMenu",
+			"pauseText",
+			"tutorialText"
 		],
 		"subfolders": [
 			{
@@ -233,13 +235,8 @@
 					"enemyStaticSpawn",
 					"enemyEngineFX",
 					"enemyBullet3",
-					"playerHP",
-					"playerShield",
 					"enemyCornerSpawn",
 					"boss",
-					"panelShield",
-					"shieldBattery",
-					"panelRedButton",
 					"batteryMoveTo"
 				],
 				"subfolders": [
@@ -253,6 +250,23 @@
 						],
 						"subfolders": [],
 						"name": "targetReticles"
+					},
+					{
+						"items": [
+							"panelRedButton",
+							"panelShield",
+							"centralPanel",
+							"panelBottom",
+							"panelHP",
+							"panelLights",
+							"panelScore",
+							"panelShields",
+							"playerHP",
+							"playerShield",
+							"shieldBattery"
+						],
+						"subfolders": [],
+						"name": "panels"
 					}
 				],
 				"name": "Sprites"
@@ -340,7 +354,72 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "explosion1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 986881106609486,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu_select.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 469846906912806,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu_select2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 474384000918513,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "missile_shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 707058180265170,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plasma_shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 669853960406652,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "railgun_shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 224382962820957,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "railgun_shoot2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 382788563433185,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "enemy_shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 241379059027046,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

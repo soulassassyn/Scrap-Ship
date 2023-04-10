@@ -220,6 +220,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 772459445571950
+		},
+		{
+			"eventType": "variable",
+			"name": "regenActive",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 536959042349250
+		},
+		{
+			"eventType": "variable",
+			"name": "tutorialMode",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 897617891868669
 		}
 	],
 	"sid": 380652354289867

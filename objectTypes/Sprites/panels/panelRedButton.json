@@ -1,9 +1,17 @@
 {
-	"name": "panelShield",
+	"name": "panelRedButton",
 	"plugin-id": "Sprite",
-	"sid": 950367421955000,
+	"sid": 801152937234621,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 731931609092660
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,43 +19,32 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 120,
+						"width": 30,
+						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2397576,
+						"imageSpriteId": 926648,
 						"useCollisionPoly": true,
 						"duration": 1
-					}
-				],
-				"sid": 402701746364747,
-				"name": "panelBevel",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 0
-			},
-			{
-				"frames": [
+					},
 					{
-						"width": 246,
-						"height": 116,
+						"width": 30,
+						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4596936,
+						"imageSpriteId": 6616362,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 696913884755792,
-				"name": "panelFill",
+				"sid": 543910104990220,
+				"name": "redButton",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

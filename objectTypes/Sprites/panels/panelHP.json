@@ -1,7 +1,7 @@
 {
-	"name": "pauseMenu",
+	"name": "panelHP",
 	"plugin-id": "Sprite",
-	"sid": 513172617853658,
+	"sid": 517298573875775,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,40 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 204,
+						"width": 258,
+						"height": 66,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9647918,
+						"imageSpriteId": 6694834,
 						"collisionPoly": {
 							"points": [
-								0.074016,
-								0,
-								0.5,
-								0,
-								0.925984,
-								0,
-								1,
-								0.5331603229527104,
-								0.901408,
-								1,
-								0.5,
-								1,
-								0.098592,
-								1,
-								0,
-								0.5331603229527104
+								0.13565891472868216,
+								0.015151515151515152,
+								0.45348837209302323,
+								0.015151515151515152,
+								0.7713178294573644,
+								0.015151515151515152,
+								0.45348837209302323,
+								0.9848484848484849
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 989733786479252,
-				"name": "pauseMenu",
+				"sid": 814893034399862,
+				"name": "panelHP",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
