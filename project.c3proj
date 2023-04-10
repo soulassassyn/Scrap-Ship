@@ -191,7 +191,11 @@
 			"coreStatText",
 			"TimelineController",
 			"playerScore",
-			"floatingScore"
+			"floatingScore",
+			"waveCountTitleText",
+			"waveCountText",
+			"shieldPanelText",
+			"pauseMenu"
 		],
 		"subfolders": [
 			{
@@ -231,7 +235,12 @@
 					"enemyBullet3",
 					"playerHP",
 					"playerShield",
-					"enemyCornerSpawn"
+					"enemyCornerSpawn",
+					"boss",
+					"panelShield",
+					"shieldBattery",
+					"panelRedButton",
+					"batteryMoveTo"
 				],
 				"subfolders": [
 					{

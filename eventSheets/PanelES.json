@@ -1,5 +1,455 @@
 {
 	"name": "PanelES",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-interactive",
+					"objectClass": "System",
+					"sid": 318647179772879,
+					"parameters": {
+						"layer": "\"arena\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 584723258981570,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 423444642583745,
+							"parameters": {
+								"object": "panelShield"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 930772214581041,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 134802906103071
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 293944703674357,
+							"parameters": {
+								"object": "panelShield"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-from-sprite",
+							"objectClass": "Mouse",
+							"sid": 227393904463014,
+							"parameters": {
+								"sprite": "targetReticle1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "targetReticle1",
+							"sid": 403920102344427,
+							"parameters": {
+								"frame-number": "whichReticle"
+							}
+						}
+					],
+					"sid": 849246971287426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "playerShip",
+							"sid": 777972681329555,
+							"parameters": {
+								"object": "enemyShip"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 852500197989460
+				},
+				{
+					"eventType": "variable",
+					"name": "shieldBroken",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 835344475603925
+				},
+				{
+					"eventType": "variable",
+					"name": "tempShieldRegen",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 827432605406943
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 419543928223789,
+							"parameters": {
+								"object": "panelRedButton"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 869850623243953,
+							"parameters": {
+								"variable": "shieldBroken"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "panelRedButton",
+							"sid": 579757854443766,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 641635271663927
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 620520342227799,
+							"parameters": {
+								"object": "panelRedButton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 267403361526503,
+							"parameters": {
+								"variable": "shieldBroken"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "panelRedButton",
+							"sid": 350176513593239,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 177298426056703
+				},
+				{
+					"eventType": "variable",
+					"name": "shieldFail",
+					"type": "number",
+					"initialValue": "33",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 899035949949703
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 955991220605087,
+							"parameters": {
+								"variable": "playerShields",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 250910057076586,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 433066622580343,
+									"parameters": {
+										"first-value": "random(0, 100)",
+										"comparison": 4,
+										"second-value": "shieldFail"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 288577097066465
+								}
+							],
+							"actions": [],
+							"sid": 917201163208628,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 783764565564765,
+											"parameters": {
+												"variable": "regenTick",
+												"value": "60"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 854767040768914,
+											"parameters": {
+												"variable": "shieldBroken",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 324676247730553
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-all",
+											"objectClass": "System",
+											"sid": 140176634099891,
+											"parameters": {
+												"object": "shieldBattery"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-active",
+											"objectClass": "shieldBattery",
+											"sid": 606493324122061,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "active"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "shieldBattery",
+											"sid": 367231231695366,
+											"behaviorType": "Sine2",
+											"parameters": {
+												"state": "active"
+											}
+										}
+									],
+									"sid": 684212712091079
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 937365659858516,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "panelRedButton"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 456951551646653,
+							"parameters": {
+								"variable": "shieldBroken"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 911180023159229,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 485447555667587,
+									"parameters": {
+										"variable": "regenTick",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 658858938818794,
+									"parameters": {
+										"variable": "playerShields",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 742525930131030
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 275709285708877,
+									"parameters": {
+										"object": "shieldBattery"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-active",
+									"objectClass": "shieldBattery",
+									"sid": 339006068841353,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "shieldBattery",
+									"sid": 760644621777757,
+									"behaviorType": "Sine2",
+									"parameters": {
+										"state": "inactive"
+									}
+								}
+							],
+							"sid": 580396476505458,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "shieldBattery",
+											"sid": 950734524642141,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "shieldBattery",
+											"sid": 690160452060397,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"scale\"",
+												"property": "scale",
+												"end-x": "1.2",
+												"end-y": "1.2",
+												"time": "0.5",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 554732185966953,
+											"parameters": {
+												"seconds": "0.5"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "shieldBattery",
+											"sid": 778923586632085,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "scale",
+												"end-x": "1",
+												"end-y": "1",
+												"time": "0.1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 445940903534188
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 224001640072406,
+									"parameters": {
+										"variable": "shieldBroken",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 818315441381486
+						}
+					]
+				}
+			]
+		}
+	],
 	"sid": 289808317490256
 }

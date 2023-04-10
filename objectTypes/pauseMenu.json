@@ -1,7 +1,7 @@
 {
-	"name": "targetReticle5",
+	"name": "pauseMenu",
 	"plugin-id": "Sprite",
-	"sid": 984016104479367,
+	"sid": 513172617853658,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,40 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 408986,
-						"collisionPoly": {
-							"points": [
-								0.34375,
-								0.34375,
-								0.5,
-								0.28125,
-								0.65625,
-								0.34375,
-								0.71875,
-								0.5,
-								0.65625,
-								0.65625,
-								0.5,
-								0.71875,
-								0.34375,
-								0.65625,
-								0.28125,
-								0.5
-							]
-						},
+						"imageSpriteId": 2082758,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 496286816236581,
-				"name": "targetReticle5",
+				"sid": 989733786479252,
+				"name": "pauseMenu",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

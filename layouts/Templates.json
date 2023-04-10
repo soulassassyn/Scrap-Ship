@@ -2238,7 +2238,9 @@
 						"live-preview": false
 					},
 					"uid": 123,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"bulletDamage": 0
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -2790,6 +2792,69 @@
 					}
 				},
 				{
+					"type": "pauseMenu",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "pauseMenu",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 140,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1110.9804491525506,
+						"y": 571.831331905337,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "boss",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "boss",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 131,
+					"instanceVariables": {
+						"hp": 0,
+						"damage": 0,
+						"bulletDamage": 0,
+						"score": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 927.4537504291274,
+						"y": 90.12195336126265,
+						"width": 220,
+						"height": 140,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
+					}
+				},
+				{
 					"type": "playerShip",
 					"properties": {
 						"initially-visible": true,
@@ -3196,7 +3261,7 @@
 								"predictive-aim": false,
 								"projectile-speed": 500,
 								"use-collision-cells": true,
-								"enabled": true
+								"enabled": false
 							}
 						}
 					},

@@ -163,16 +163,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "difficulty",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 913132911591439
-		},
-		{
-			"eventType": "variable",
 			"name": "playerScore",
 			"type": "number",
 			"initialValue": "0",
@@ -180,6 +170,56 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 998945036652961
+		},
+		{
+			"eventType": "variable",
+			"name": "difficulty",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 795947906721094
+		},
+		{
+			"eventType": "variable",
+			"name": "gameSpawnTimer",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 510855102626873
+		},
+		{
+			"eventType": "variable",
+			"name": "waveCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 794836397608960
+		},
+		{
+			"eventType": "variable",
+			"name": "whichReticle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 291064549635011
+		},
+		{
+			"eventType": "variable",
+			"name": "regenTick",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 772459445571950
 		}
 	],
 	"sid": 380652354289867

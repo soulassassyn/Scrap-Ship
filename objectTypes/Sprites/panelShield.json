@@ -1,0 +1,60 @@
+{
+	"name": "panelShield",
+	"plugin-id": "Sprite",
+	"sid": 950367421955000,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2397576,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 402701746364747,
+				"name": "panelBevel",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 246,
+						"height": 116,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4596936,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 696913884755792,
+				"name": "panelFill",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

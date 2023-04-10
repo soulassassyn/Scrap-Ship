@@ -97,11 +97,14 @@ export class SpriteGrid {
 		for (let i = 0; i < this.gridUIDs.length; i++)
 		{
 			const forDestroy = this.runtime.getInstanceByUid(this.gridUIDs[i]);
-			forDestroy.destroy();
+			if (forDestroy == null) {
+				this.gridUIDs.length = 0;
+			} else {
+				forDestroy.destroy();
+			}
 		}
 		this.gridUIDs = [];
     }
-
 }
 
 // Needed to initialize the spriteGrids object and attach it to the runtime object so that it's scoped Globally

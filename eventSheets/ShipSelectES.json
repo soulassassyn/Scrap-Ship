@@ -110,6 +110,49 @@
 			"sid": 111074656832573,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Reset grid to default"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.spriteGrids.gridShip.updateSpriteName(\"gridShip\");"
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 747456731286189,
+							"parameters": {
+								"variable": "currentPage",
+								"value": "\"gridShip\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "shipStats",
+							"sid": 580917791338932,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 881005066173725
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.spriteGrids.gridShip.clearGrid();"
+						}
+					],
+					"sid": 140879955318307
+				},
+				{
 					"eventType": "block",
 					"conditions": [],
 					"actions": [
@@ -1980,10 +2023,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 877835808076776,
+											"sid": 121169975236797,
 											"parameters": {
 												"instance-variable": "fireRate",
-												"value": "10"
+												"value": "5"
 											}
 										},
 										{

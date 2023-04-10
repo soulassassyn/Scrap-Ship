@@ -41,10 +41,66 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 926345,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.1875,
+								0.8125,
+								0.1875,
+								0.8125,
+								0.8125,
+								0.1875,
+								0.8125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7959382,
+						"collisionPoly": {
+							"points": [
+								0.34375,
+								0.34375,
+								0.5,
+								0.03125,
+								0.65625,
+								0.34375,
+								0.96875,
+								0.5,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.34375,
+								0.65625,
+								0.03125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
 				"sid": 126214405019844,
-				"name": "targetReticle",
+				"name": "targetReticle1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

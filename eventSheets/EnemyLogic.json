@@ -63,7 +63,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "spawnInterval",
+			"name": "spawnInterval1",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -73,13 +73,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "gameSpawnTimer",
+			"name": "spawnInterval2",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 150726429827462
+			"sid": 410348056723657
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnInterval3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190010107187932
 		},
 		{
 			"eventType": "block",
@@ -110,21 +120,21 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
+							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 292111799162753,
+							"sid": 721976797407342,
 							"parameters": {
-								"variable": "spawnSelector",
-								"value": "choose(1, 2, 3)"
+								"variable": "waveCount",
+								"value": "1"
 							}
 						},
 						{
-							"id": "log",
-							"objectClass": "DEBUG",
-							"sid": 970451492543386,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 125189871613977,
 							"parameters": {
-								"type": "log",
-								"message": "\"Spawned Triggered\""
+								"variable": "spawnSelector",
+								"value": "choose(1, 2, 3)"
 							}
 						}
 					],
@@ -134,9 +144,64 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 891999395306612,
+									"parameters": {
+										"first-value": "waveCount % 4",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 781808577332265,
+									"sid": 690506728152075,
+									"parameters": {
+										"variable": "gameSpawnTimer",
+										"comparison": 5,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 116564634216651,
+									"parameters": {
+										"variable": "difficulty",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 230575037747262,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 877580068137894,
+											"parameters": {
+												"variable": "gameSpawnTimer",
+												"value": "1.5"
+											}
+										}
+									],
+									"sid": 184186780514622
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 349916983555748,
 									"parameters": {
 										"variable": "spawnSelector",
 										"comparison": 0,
@@ -146,29 +211,20 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 241508029407833
+									"sid": 750165131794148
 								}
 							],
 							"actions": [
 								{
 									"id": "toggle-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 781739819876106,
+									"sid": 397249587859195,
 									"parameters": {
 										"variable": "spawnGroup1"
 									}
-								},
-								{
-									"id": "log",
-									"objectClass": "DEBUG",
-									"sid": 403316106631310,
-									"parameters": {
-										"type": "log",
-										"message": "\"Group 1\""
-									}
 								}
 							],
-							"sid": 916141661460913
+							"sid": 448693139294085
 						},
 						{
 							"eventType": "block",
@@ -176,7 +232,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 198767506709492,
+									"sid": 976903199442224,
 									"parameters": {
 										"variable": "spawnSelector",
 										"comparison": 0,
@@ -186,14 +242,14 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 878461761748692
+									"sid": 502953747898077
 								}
 							],
 							"actions": [
 								{
 									"id": "toggle-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 981026236297844,
+									"sid": 601740476887683,
 									"parameters": {
 										"variable": "spawnGroup2"
 									}
@@ -201,23 +257,14 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 378328478024267,
+									"sid": 558480902849221,
 									"parameters": {
-										"variable": "spawnInterval",
+										"variable": "spawnInterval2",
 										"value": "0"
-									}
-								},
-								{
-									"id": "log",
-									"objectClass": "DEBUG",
-									"sid": 557165616520330,
-									"parameters": {
-										"type": "log",
-										"message": "\"Group 2\""
 									}
 								}
 							],
-							"sid": 720293666499059
+							"sid": 190384651478026
 						},
 						{
 							"eventType": "block",
@@ -225,7 +272,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 372405392389316,
+									"sid": 435620119873267,
 									"parameters": {
 										"variable": "spawnSelector",
 										"comparison": 0,
@@ -235,14 +282,14 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 591776551332470
+									"sid": 438067399297516
 								}
 							],
 							"actions": [
 								{
 									"id": "toggle-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 480273188112310,
+									"sid": 685805132943601,
 									"parameters": {
 										"variable": "spawnGroup3"
 									}
@@ -250,23 +297,14 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 984146308742389,
+									"sid": 364989142169784,
 									"parameters": {
-										"variable": "spawnInterval",
+										"variable": "spawnInterval3",
 										"value": "0"
-									}
-								},
-								{
-									"id": "log",
-									"objectClass": "DEBUG",
-									"sid": 165945896946667,
-									"parameters": {
-										"type": "log",
-										"message": "\"Group 3\""
 									}
 								}
 							],
-							"sid": 750095047390934
+							"sid": 771448749820028
 						}
 					]
 				},
@@ -485,9 +523,9 @@
 					"actions": [
 						{
 							"callFunction": "damageToPlayer",
-							"sid": 183173991146076,
+							"sid": 962585603150035,
 							"parameters": [
-								"enemyShip.bulletDamage",
+								"enemyBullet3.bulletDamage",
 								"0"
 							]
 						}
@@ -924,9 +962,9 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 581702902035095,
+											"sid": 790451496622312,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval2",
 												"comparison": 3,
 												"value": "1"
 											}
@@ -949,9 +987,9 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 549695917772252,
+											"sid": 998845698822776,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval2",
 												"value": "1"
 											}
 										}
@@ -964,9 +1002,9 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 990791733226463,
+											"sid": 529933102677769,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval2",
 												"comparison": 0,
 												"value": "2"
 											}
@@ -1078,6 +1116,15 @@
 									}
 								},
 								{
+									"id": "set-instvar-value",
+									"objectClass": "enemyBullet3",
+									"sid": 184554869720232,
+									"parameters": {
+										"instance-variable": "bulletDamage",
+										"value": "enemyShip.bulletDamage"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "enemyShip",
 									"sid": 868188640268334,
@@ -1086,6 +1133,15 @@
 										"layer": "\"arena\"",
 										"image-point": "\"rightWeapon\"",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "enemyBullet3",
+									"sid": 764203019794982,
+									"parameters": {
+										"instance-variable": "bulletDamage",
+										"value": "enemyShip.bulletDamage"
 									}
 								}
 							],
@@ -1306,9 +1362,9 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 376892591250130,
+											"sid": 280753942494520,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval3",
 												"comparison": 3,
 												"value": "1"
 											}
@@ -1331,9 +1387,9 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 992923996126516,
+											"sid": 661416025462002,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval3",
 												"value": "1"
 											}
 										},
@@ -1357,9 +1413,9 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 693594421819097,
+											"sid": 928381198456566,
 											"parameters": {
-												"variable": "spawnInterval",
+												"variable": "spawnInterval3",
 												"comparison": 0,
 												"value": "2"
 											}
@@ -1476,6 +1532,15 @@
 											}
 										},
 										{
+											"id": "set-instvar-value",
+											"objectClass": "enemyBullet3",
+											"sid": 515946065189987,
+											"parameters": {
+												"instance-variable": "bulletDamage",
+												"value": "enemyShip.bulletDamage"
+											}
+										},
+										{
 											"id": "spawn-another-object",
 											"objectClass": "enemyShip",
 											"sid": 658211846359791,
@@ -1484,6 +1549,15 @@
 												"layer": "\"arena\"",
 												"image-point": "\"rightWeapon\"",
 												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "enemyBullet3",
+											"sid": 934468100074643,
+											"parameters": {
+												"instance-variable": "bulletDamage",
+												"value": "enemyShip.bulletDamage"
 											}
 										}
 									],
@@ -1524,55 +1598,6 @@
 			"actions": [],
 			"sid": 391764730497855,
 			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-by-unique-id",
-							"objectClass": "playerShip",
-							"sid": 131649400634650,
-							"parameters": {
-								"unique-id": "UID"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "flash",
-							"objectClass": "playerShip",
-							"sid": 240988794893058,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "2"
-							}
-						},
-						{
-							"id": "flash",
-							"objectClass": "playerWeapon",
-							"sid": 663887402459549,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "2"
-							}
-						},
-						{
-							"id": "flash",
-							"objectClass": "playerEngine",
-							"sid": 234437752565233,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "2"
-							}
-						}
-					],
-					"sid": 595500131575380
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -1659,6 +1684,55 @@
 						}
 					],
 					"sid": 568292986524436
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "playerShip",
+							"sid": 635781016934921,
+							"parameters": {
+								"unique-id": "UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "playerShip",
+							"sid": 922395271498746,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "2"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "playerWeapon",
+							"sid": 996913561564563,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "2"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "playerEngine",
+							"sid": 907941937772044,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "2"
+							}
+						}
+					],
+					"sid": 709623988075150
 				}
 			]
 		}

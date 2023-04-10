@@ -144,7 +144,7 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 425,
+						"x": 640,
 						"y": 527,
 						"width": 270.92044845591477,
 						"height": 128.17589873315424,
@@ -179,7 +179,7 @@
 						"horizontal-alignment": "center",
 						"vertical-alignment": "center",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "center",
 						"read-aloud": false
 					},

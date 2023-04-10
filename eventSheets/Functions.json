@@ -124,6 +124,13 @@
 					],
 					"actions": [
 						{
+							"callFunction": "layerOff",
+							"sid": 719532639910101,
+							"parameters": [
+								"\"pauseMenu\""
+							]
+						},
+						{
 							"id": "set-time-scale",
 							"objectClass": "System",
 							"sid": 481190381440980,
@@ -142,10 +149,10 @@
 						{
 							"id": "set-group-active",
 							"objectClass": "System",
-							"sid": 174029440153577,
+							"sid": 140228625844451,
 							"parameters": {
 								"group-name": "\"shipControls\"",
-								"state": "toggle-active"
+								"state": "activated"
 							}
 						}
 					],
@@ -161,6 +168,13 @@
 						}
 					],
 					"actions": [
+						{
+							"callFunction": "layerOn",
+							"sid": 828843635741590,
+							"parameters": [
+								"\"pauseMenu\""
+							]
+						},
 						{
 							"id": "set-time-scale",
 							"objectClass": "System",
@@ -180,10 +194,10 @@
 						{
 							"id": "set-group-active",
 							"objectClass": "System",
-							"sid": 102169298189303,
+							"sid": 896153232507657,
 							"parameters": {
 								"group-name": "\"shipControls\"",
-								"state": "toggle-active"
+								"state": "deactivated"
 							}
 						}
 					],

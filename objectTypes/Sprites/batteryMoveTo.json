@@ -1,0 +1,70 @@
+{
+	"name": "batteryMoveTo",
+	"plugin-id": "Sprite",
+	"sid": 337875457286611,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 742516834584122
+		},
+		{
+			"name": "staticPick",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 332739843394779
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 741135604247591
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4422284,
+						"collisionPoly": {
+							"points": [
+								0.4296875,
+								0.4296875,
+								0.5703125,
+								0.4296875,
+								0.5703125,
+								0.5703125,
+								0.4296875,
+								0.5703125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 195466888865515,
+				"name": "enemyCornerSpawn",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

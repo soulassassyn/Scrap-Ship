@@ -1,0 +1,73 @@
+{
+	"name": "shieldBattery",
+	"plugin-id": "Sprite",
+	"sid": 193405939970724,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 235848114671069
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 223809583329037
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 430610355391061
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 108,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5413542,
+						"collisionPoly": {
+							"points": [
+								0.36447811447811446,
+								0,
+								0.40757575757575754,
+								0,
+								0.45067340067340067,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.40757575757575754,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 382526096871198,
+				"name": "shieldBattery",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
