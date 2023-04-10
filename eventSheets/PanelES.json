@@ -146,6 +146,17 @@
 												"variable": "weaponBroken",
 												"value": "true"
 											}
+										},
+										{
+											"id": "shake",
+											"objectClass": "camera",
+											"sid": 885910666220384,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "5",
+												"duration": "1",
+												"mode": "constant-magnitude"
+											}
 										}
 									],
 									"sid": 983770977904238
@@ -447,6 +458,17 @@
 											"parameters": {
 												"variable": "shieldBroken",
 												"value": "true"
+											}
+										},
+										{
+											"id": "shake",
+											"objectClass": "camera",
+											"sid": 361831150508421,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "5",
+												"duration": "1",
+												"mode": "constant-magnitude"
 											}
 										}
 									],

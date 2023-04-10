@@ -889,7 +889,7 @@
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 5,
+								"magnitude": 10,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false
@@ -899,11 +899,11 @@
 							"properties": {
 								"movement": "size",
 								"wave": "sine",
-								"period": 2,
+								"period": 1,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 10,
+								"magnitude": 20,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false
@@ -1099,7 +1099,7 @@
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 5,
+								"magnitude": 10,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false
@@ -1109,11 +1109,11 @@
 							"properties": {
 								"movement": "size",
 								"wave": "sine",
-								"period": 2,
+								"period": 1,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
-								"magnitude": 10,
+								"magnitude": 20,
 								"magnitude-random": 0,
 								"enabled": false,
 								"live-preview": false

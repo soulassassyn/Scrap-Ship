@@ -162,6 +162,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -195,9 +202,9 @@
 			"waveCountTitleText",
 			"waveCountText",
 			"shieldPanelText",
-			"pauseMenu",
 			"pauseText",
-			"tutorialText"
+			"tutorialText",
+			"Particles"
 		],
 		"subfolders": [
 			{
@@ -237,7 +244,11 @@
 					"enemyBullet3",
 					"enemyCornerSpawn",
 					"boss",
-					"batteryMoveTo"
+					"batteryMoveTo",
+					"explosion",
+					"camera",
+					"star",
+					"explosion2"
 				],
 				"subfolders": [
 					{
@@ -263,7 +274,8 @@
 							"panelShields",
 							"playerHP",
 							"playerShield",
-							"shieldBattery"
+							"shieldBattery",
+							"pauseMenu"
 						],
 						"subfolders": [],
 						"name": "panels"
@@ -303,7 +315,8 @@
 			"MainES",
 			"ShipSelectES",
 			"PanelES",
-			"EnemyLogic"
+			"EnemyLogic",
+			"Stars"
 		],
 		"subfolders": []
 	},
@@ -418,12 +431,101 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "explosion2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 725451566815986,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu_select3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 742468351791768,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "start.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 834295888610569,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "railgun_shoot3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 557838163245471,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "SkyFire (Title Screen).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 723310640822560,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Alone Against Enemy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 378300342792073,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Battle in the Stars.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 473984479998171,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Brave Pilots (Menu Screen).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 635050906770054,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Defeated (Game Over Tune).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 374578667856331,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Rain of Lasers.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 697569414957234,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Without Fear.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 164237971194804,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

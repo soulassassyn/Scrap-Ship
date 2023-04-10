@@ -106,7 +106,31 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 357659076682543,
+					"parameters": {
+						"tag": "\"menu\"",
+						"db": "-100",
+						"duration": "3",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 256210220598281,
+					"parameters": {
+						"audio-file": "Without Fear",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"game\""
+					}
+				}
+			],
 			"sid": 111074656832573,
 			"children": [
 				{
@@ -772,9 +796,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 481324439009313,
+					"sid": 191583011288737,
 					"parameters": {
-						"audio-file": "menu_select",
+						"audio-file": "menu_select3",
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
@@ -870,9 +894,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 486526175892199,
+					"sid": 787849689999075,
 					"parameters": {
-						"audio-file": "menu_select",
+						"audio-file": "menu_select3",
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
@@ -968,9 +992,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 294257218569581,
+					"sid": 296101957534853,
 					"parameters": {
-						"audio-file": "menu_select",
+						"audio-file": "menu_select3",
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",
@@ -2192,19 +2216,19 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 679064751666405,
+											"sid": 771276610294732,
 											"parameters": {
 												"instance-variable": "bulletSpeed",
-												"value": "80"
+												"value": "100"
 											}
 										},
 										{
 											"id": "set-instvar-value",
 											"objectClass": "gridWeapon",
-											"sid": 228590935325654,
+											"sid": 973064946765009,
 											"parameters": {
 												"instance-variable": "bulletDamage",
-												"value": "40"
+												"value": "60"
 											}
 										}
 									],

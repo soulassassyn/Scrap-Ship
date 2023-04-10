@@ -1,0 +1,115 @@
+{
+	"name": "Stars",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 557864602428416
+				}
+			],
+			"actions": [],
+			"sid": 524476305935525,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 653789132778136,
+							"parameters": {
+								"count": "75"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "createStar",
+							"sid": 328020816191445
+						}
+					],
+					"sid": 296405524401721
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 519181951242169,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "star",
+					"sid": 545466816489527,
+					"parameters": {
+						"frame-number": "choose(0, 1, 2, 3)"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "star",
+					"sid": 227702115203604,
+					"parameters": {
+						"opacity": "random(50, 100)"
+					}
+				}
+			],
+			"sid": 839600881169591
+		},
+		{
+			"functionName": "createStar",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 868174499617864,
+					"parameters": {
+						"object-to-create": "star",
+						"layer": "\"background\"",
+						"x": "random(0, LayoutWidth)",
+						"y": "random(0, LayoutHeight)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "star",
+					"sid": 131367861185620,
+					"parameters": {
+						"frame-number": "choose(0, 1, 2, 3)"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "star",
+					"sid": 603152037775920,
+					"parameters": {
+						"opacity": "random(50, 100)"
+					}
+				}
+			],
+			"sid": 337916713669459
+		}
+	],
+	"sid": 108262007620700
+}

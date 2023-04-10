@@ -1,0 +1,121 @@
+{
+	"name": "explosion2",
+	"plugin-id": "Sprite",
+	"sid": 838430643727306,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 89,
+						"height": 89,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5006402,
+						"collisionPoly": {
+							"points": [
+								0.48314606741573035,
+								0.48314606741573035,
+								0.5,
+								0.4157303370786517,
+								0.5168539325842697,
+								0.48314606741573035,
+								0.5842696629213483,
+								0.5,
+								0.5168539325842697,
+								0.5168539325842697,
+								0.5,
+								0.5842696629213483,
+								0.48314606741573035,
+								0.5168539325842697,
+								0.4157303370786517,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 89,
+						"height": 89,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7353329,
+						"collisionPoly": {
+							"points": [
+								0.48314606741573035,
+								0.48314606741573035,
+								0.5,
+								0.4157303370786517,
+								0.5168539325842697,
+								0.48314606741573035,
+								0.5842696629213483,
+								0.5,
+								0.5168539325842697,
+								0.5168539325842697,
+								0.5,
+								0.5842696629213483,
+								0.48314606741573035,
+								0.5168539325842697,
+								0.4157303370786517,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 89,
+						"height": 89,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4028697,
+						"collisionPoly": {
+							"points": [
+								0.48314606741573035,
+								0.48314606741573035,
+								0.5,
+								0.4157303370786517,
+								0.5168539325842697,
+								0.48314606741573035,
+								0.5842696629213483,
+								0.5,
+								0.5168539325842697,
+								0.5168539325842697,
+								0.5,
+								0.5842696629213483,
+								0.48314606741573035,
+								0.5168539325842697,
+								0.4157303370786517,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 666713809132593,
+				"name": "explosion2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 24
+			}
+		],
+		"subfolders": []
+	}
+}

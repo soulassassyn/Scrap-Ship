@@ -2821,6 +2821,52 @@
 					}
 				},
 				{
+					"type": "Particles",
+					"properties": {
+						"rate": 387,
+						"spray-cone": 360,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 29,
+						"size": 23,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": 15,
+						"gravity": 0,
+						"angle-randomiser": 77,
+						"life-speed-randomiser": 131,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 778.7391663493931,
+						"y": 556.4593329082137,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "boss",
 					"properties": {
 						"initially-visible": true,
@@ -2831,9 +2877,9 @@
 					},
 					"uid": 131,
 					"instanceVariables": {
-						"hp": 0,
-						"damage": 0,
-						"bulletDamage": 0,
+						"hp": 450,
+						"damage": 25,
+						"bulletDamage": 20,
 						"score": 0
 					},
 					"behaviors": {},
@@ -3721,8 +3767,8 @@
 						"path": 0,
 						"hp": 80,
 						"damage": 25,
-						"bulletDamage": 0,
-						"score": 0
+						"bulletDamage": 20,
+						"score": 60
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -3783,8 +3829,8 @@
 						},
 						"Turret": {
 							"properties": {
-								"range": 300,
-								"rate-of-fire": 1,
+								"range": 1000,
+								"rate-of-fire": 0.8,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -4848,7 +4894,7 @@
 								"rotate": true,
 								"rotate-speed": 270,
 								"target-mode": "first-in-range",
-								"predictive-aim": true,
+								"predictive-aim": false,
 								"projectile-speed": 500,
 								"use-collision-cells": true,
 								"enabled": true

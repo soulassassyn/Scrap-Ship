@@ -22,6 +22,10 @@
 			"includeSheet": "EnemyLogic"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Stars"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -85,6 +89,18 @@
 							"sid": 569971736222205,
 							"parameters": {
 								"cursor-style": "normal"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 510438651297595,
+							"parameters": {
+								"audio-file": "SkyFire (Title Screen)",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"title\""
 							}
 						}
 					],
@@ -218,6 +234,18 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 624388315612077,
+					"parameters": {
+						"audio-file": "start",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"callFunction": "layerOff",
 					"sid": 647414323995805,
 					"parameters": [
@@ -237,6 +265,29 @@
 					"parameters": [
 						"\"arena\""
 					]
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 997859933622785,
+					"parameters": {
+						"tag": "\"title\"",
+						"db": "-100",
+						"duration": "3",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 555588862025450,
+					"parameters": {
+						"audio-file": "Brave Pilots (Menu Screen)",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"menu\""
+					}
 				}
 			],
 			"sid": 689651220899543
@@ -337,6 +388,14 @@
 							"sid": 515561713016837,
 							"parameters": {
 								"text": "waveCount"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "bg",
+							"sid": 293769883299350,
+							"parameters": {
+								"frame-number": "1"
 							}
 						}
 					],
@@ -694,6 +753,41 @@
 						{
 							"callFunction": "pauseGame",
 							"sid": 260890111506736
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 450004679550354,
+							"parameters": {
+								"audio-file": "explosion1",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 106629846740911,
+							"parameters": {
+								"tag": "\"game\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 737972212769337,
+							"parameters": {
+								"audio-file": "Defeated (Game Over Tune)",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"defeat\""
+							}
 						}
 					],
 					"sid": 851658421744865,
@@ -1447,9 +1541,9 @@
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 527710915975189,
+															"sid": 301369266298173,
 															"parameters": {
-																"audio-file": "railgun_shoot2",
+																"audio-file": "railgun_shoot3",
 																"loop": "not-looping",
 																"volume": "0",
 																"stereo-pan": "0",
@@ -1560,21 +1654,33 @@
 											],
 											"actions": [
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 163141219803978,
+													"parameters": {
+														"audio-file": "railgun_shoot",
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
 													"id": "move-forward",
 													"objectClass": "playerShip",
-													"sid": 756742403637990,
+													"sid": 335392376212802,
 													"parameters": {
-														"distance": "-6"
+														"distance": "-4"
 													}
 												},
 												{
 													"id": "accelerate",
 													"objectClass": "playerShip",
-													"sid": 714613851285309,
+													"sid": 896542771299221,
 													"behaviorType": "Custom",
 													"parameters": {
 														"which": "forwards",
-														"acceleration": "-2000"
+														"acceleration": "-1500"
 													}
 												},
 												{
@@ -1636,6 +1742,36 @@
 												}
 											],
 											"sid": 154091967269807
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-all",
+													"objectClass": "System",
+													"sid": 663992043913626,
+													"parameters": {
+														"object": "energyBlast"
+													}
+												},
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "energyBlast",
+													"sid": 123728452541475,
+													"parameters": {
+														"comparison": 0,
+														"number": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "energyBlast",
+													"sid": 772953864612110
+												}
+											],
+											"sid": 592455365331464
 										}
 									]
 								}
@@ -1733,7 +1869,30 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "shake",
+									"objectClass": "camera",
+									"sid": 435801609786127,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "10",
+										"duration": "0.2",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "enemyShip",
+									"sid": 331709137058703,
+									"parameters": {
+										"object": "explosion2",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
 							"sid": 915062719901430,
 							"children": [
 								{
@@ -1753,12 +1912,6 @@
 											"id": "destroy",
 											"objectClass": "bullet",
 											"sid": 246185955120749
-										},
-										{
-											"id": "destroy",
-											"objectClass": "energyBullet",
-											"sid": 957975953048225,
-											"disabled": true
 										},
 										{
 											"id": "destroy",
@@ -1798,6 +1951,17 @@
 													"parameters": [
 														"enemyShip.UID"
 													]
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "enemyShip",
+													"sid": 705800637173314,
+													"parameters": {
+														"object": "explosion",
+														"layer": "\"arena\"",
+														"image-point": "0",
+														"create-hierarchy": false
+													}
 												}
 											],
 											"sid": 211064614434997
@@ -1811,19 +1975,43 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-outside-layout",
-									"objectClass": "energyBullet",
-									"sid": 231711100644949
+									"id": "on-animation-finished",
+									"objectClass": "explosion",
+									"sid": 606979279836445,
+									"parameters": {
+										"animation": "\"explosion\""
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "energyBullet",
-									"sid": 791596694951603
+									"objectClass": "explosion",
+									"sid": 779826746067668
 								}
 							],
-							"sid": 872011002763348
+							"sid": 595829109641616
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "explosion2",
+									"sid": 183048096558578,
+									"parameters": {
+										"animation": "\"explosion2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "explosion2",
+									"sid": 292870986526379
+								}
+							],
+							"sid": 531676234615679
 						}
 					],
 					"sid": 193767042245664

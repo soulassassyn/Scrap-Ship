@@ -75,13 +75,13 @@
 				{
 					"type": "MenuTitle",
 					"properties": {
-						"text": "Drift\nConnector",
+						"text": "STAR SHATTER",
 						"enable-bbcode": true,
 						"font": "ABSTRACT",
 						"size": 23,
 						"line-height": 27,
 						"bold": false,
-						"italic": false,
+						"italic": true,
 						"color": [
 							0.9372549019607843,
 							0.6784313725490196,
@@ -124,7 +124,7 @@
 						"size": 14,
 						"line-height": 0,
 						"bold": false,
-						"italic": false,
+						"italic": true,
 						"color": [
 							0.9372549019607843,
 							0.6784313725490196,
@@ -147,51 +147,6 @@
 						"x": 640,
 						"y": 527,
 						"width": 270.92044845591477,
-						"height": 128.17589873315424,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "MenuItems",
-					"properties": {
-						"text": "Options",
-						"enable-bbcode": true,
-						"font": "ABSTRACT",
-						"size": 14,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.9372549019607843,
-							0.6784313725490196,
-							0.41568627450980394,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": false,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 12,
-					"instanceVariables": {
-						"State": "options"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 852,
-						"y": 527,
-						"width": 357.92044845591477,
 						"height": 128.17589873315424,
 						"originX": 0.5,
 						"originY": 0.5,
